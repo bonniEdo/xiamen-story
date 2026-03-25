@@ -156,7 +156,7 @@
       display: inline-flex; align-items: center; gap: 4px;
       font-size: 0.85rem; padding: 3px 10px;
       border-radius: 50px;
-      background: var(--teal-light); color: var(--teal);
+      background: #DBEAFE; color: #2563EB;
       font-weight: 600; margin-top: 4px;
     }
     .audio-badge.pending {
@@ -320,7 +320,7 @@
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">下午</div>
-        <div class="stop-icon ic-night">🌃</div>
+        <div class="stop-icon ic-food">🦪</div>
         <div class="stop-info">
           <div class="stop-name">八市</div>
           <div class="stop-note">廈門傳統市場</div>
@@ -352,7 +352,7 @@
         <div class="stop-info">
           <div class="stop-name">中山路</div>
           <div class="stop-note">廈門老字號美食街漫步</div>
-          <div class="audio-badge pending">🎙 故事即將上線</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
         </div>
         <div class="stop-arrow">›</div>
       </div>
@@ -380,7 +380,7 @@
         <div class="stop-info">
           <div class="stop-name">鷺江夜遊</div>
           <div class="stop-note">鷺江夜景</div>
-          <div class="audio-badge pending">🎙 故事即將上線</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
         </div>
         <div class="stop-arrow">›</div>
       </div>
@@ -407,6 +407,33 @@
       <span class="day-badge">DAY 2</span>
       <span class="day-title">集美・閩南文化</span>
       <span class="day-charter">🚗 一日包車</span>
+    </div>
+
+    <!-- 海上小火車 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time"></div>
+        <div class="stop-icon ic-food">🥢</div>
+        <div class="stop-info">
+          <div class="stop-name">海上小火車</div>
+          <div class="stop-note">體驗廈門獨特的交通方式</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙  海上小火車</div>
+            <audio controls src="audio/海上地鐵.mp3"></audio>
+          </div>          
+          <div class="stop-desc">
+            <p>我們等一下要搭的，是廈門非常特別的「地鐵3號線」，當地人叫它「海上地鐵」。</p>
+            <p>為什麼叫海上地鐵呢？因為這條線有一段路段，是從海底穿越廈門海峽的——也就是說，我們坐在地鐵裡的時候，頭頂上是真實的海水！不過別擔心，隧道建得非常扎實，安全沒問題。</p>
+            <p>更特別的是，從海底穿出來之後，地鐵會爬上一座高架橋，這時候車窗外就是廣闊的海景，能看到廈門港、鼓浪嶼，天氣好的話視野非常漂亮。從地底下到海面上，這種反差讓很多遊客特別驚喜，這也是為什麼這條線被選為「中國最美地鐵線路」之一。</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 集美學村・大社 -->
@@ -466,32 +493,7 @@
       </div>
     </div>
 
-    <!-- 午餐 朱富貴 -->
-    <div class="stop-card" onclick="toggleCard(this)">
-      <div class="stop-header">
-        <div class="stop-time">11:30</div>
-        <div class="stop-icon ic-food">🥢</div>
-        <div class="stop-info">
-          <div class="stop-name">午餐・朱富貴</div>
-          <div class="stop-note">品嚐在地閩南料理</div>
-          <div class="audio-badge pending">🎙 故事即將上線</div>
-        </div>
-        <div class="stop-arrow">›</div>
-      </div>
-      <div class="stop-panel">
-        <div class="stop-panel-inner">
-          <div class="stop-desc">
-            <p>朱富貴是廈門非常老字號的閩南菜館，在廈門當地人心中有特殊的地位。</p>
-            <p>廈門菜屬於閩南菜系，口味清淡、注重食材原味，善用海鮮，調味偏甜微鹹，和台灣菜有很深的淵源——其實台灣很多傳統菜，根源就是從閩南傳過來的。來廈門吃一頓道地的閩南菜，你可能會吃到很多「好像在哪裡吃過」的熟悉感，但又有一點點不一樣，非常有意思。</p>
-          </div>
-          <div class="audio-pending">
-            <div class="audio-pending-icon">🎙</div>
-            <div class="audio-pending-text">景點故事錄音即將上傳</div>
-            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- 閩南傳奇秀 -->
     <div class="stop-card" onclick="toggleCard(this)">
