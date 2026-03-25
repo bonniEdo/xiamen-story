@@ -10,8 +10,8 @@
     :root {
       --amber: #F59E0B;
       --amber-light: #FDE68A;
-      --teal: #0D9488;
-      --teal-light: #CCFBF1;
+      --teal: #B45309;
+      --teal-light: #FEF3C7;
       --cream: #FFFBF0;
       --warm-white: #FEFCE8;
       --text-dark: #1C1917;
@@ -31,8 +31,8 @@
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(160deg, #F5E642 0%, #E8D820 60%, #C9B800 100%);
-      color: #5C4800;
+      background: linear-gradient(160deg, #FFFEF0 0%, #FFFCE0 60%, #FFF7B8 100%);
+      color: #6B4A00;
       padding: 48px 24px 60px;
       text-align: center;
       position: relative;
@@ -78,7 +78,7 @@
       border: 2px solid transparent;
       background: white;
       cursor: pointer;
-      font-size: 0.9rem; font-weight: 600;
+      font-size: 1rem; font-weight: 600;
       color: var(--text-mid);
       transition: all 0.2s;
       white-space: nowrap;
@@ -88,9 +88,9 @@
       background: var(--teal);
       color: white;
       border-color: var(--teal);
-      box-shadow: 0 4px 14px rgba(13,148,136,0.35);
+      box-shadow: 0 4px 14px rgba(180,83,9,0.3);
     }
-    .tab-btn .tab-date { font-size: 0.75rem; opacity: 0.8; }
+    .tab-btn .tab-date { font-size: 0.88rem; opacity: 0.8; }
 
     /* ── Day Sections ── */
     .content { padding: 24px 20px 60px; max-width: 600px; margin: 0 auto; }
@@ -108,7 +108,7 @@
       padding: 4px 12px; border-radius: 50px;
       letter-spacing: 1px;
     }
-    .day-title { font-size: 1.15rem; font-weight: 700; color: var(--text-dark); }
+    .day-title { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); }
     .day-charter {
       font-size: 0.8rem; padding: 4px 12px;
       background: var(--teal-light); color: var(--teal);
@@ -132,7 +132,7 @@
       cursor: pointer;
     }
     .stop-time {
-      font-size: 0.78rem; font-weight: 700;
+      font-size: 0.92rem; font-weight: 700;
       color: var(--teal);
       min-width: 40px;
     }
@@ -143,8 +143,8 @@
       font-size: 1.4rem; flex-shrink: 0;
     }
     .stop-info { flex: 1; }
-    .stop-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; }
-    .stop-note { font-size: 0.8rem; color: var(--text-mid); }
+    .stop-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+    .stop-note { font-size: 0.95rem; color: var(--text-mid); }
     .stop-arrow {
       font-size: 1rem; color: var(--text-light);
       transition: transform 0.25s;
@@ -154,7 +154,7 @@
     /* audio badge */
     .audio-badge {
       display: inline-flex; align-items: center; gap: 4px;
-      font-size: 0.72rem; padding: 2px 8px;
+      font-size: 0.85rem; padding: 3px 10px;
       border-radius: 50px;
       background: var(--teal-light); color: var(--teal);
       font-weight: 600; margin-top: 4px;
@@ -174,22 +174,41 @@
 
     /* ── Story Text ── */
     .stop-desc {
-      font-size: 0.88rem;
-      line-height: 1.75;
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: var(--text-mid);
+      margin-bottom: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .stop-desc.open {
+      max-height: 3000px;
       margin-bottom: 14px;
     }
     .stop-desc p + p {
       margin-top: 10px;
     }
 
+    /* ── Description Toggle ── */
+    .desc-toggle {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 12px 16px;
+      background: var(--teal-light); color: var(--teal);
+      border: none; border-radius: 12px;
+      font-size: 1rem; font-weight: 700;
+      cursor: pointer; transition: background 0.2s;
+      margin-top: 12px;
+    }
+    .desc-toggle:active { background: #FDE68A; }
+
     /* ── Audio Player ── */
     .audio-player {
-      background: linear-gradient(135deg, #F0FDFA 0%, #CCFBF1 100%);
+      background: linear-gradient(135deg, #FFFDE7 0%, #FEF9C3 100%);
       border-radius: 14px; padding: 16px;
     }
     .audio-player-title {
-      font-size: 0.82rem; font-weight: 700;
+      font-size: 0.95rem; font-weight: 700;
       color: var(--teal); margin-bottom: 12px;
       display: flex; align-items: center; gap: 6px;
     }
@@ -203,8 +222,8 @@
       text-align: center;
     }
     .audio-pending-icon { font-size: 2rem; margin-bottom: 6px; }
-    .audio-pending-text { font-size: 0.85rem; color: #92400E; font-weight: 600; }
-    .audio-pending-sub { font-size: 0.75rem; color: #B45309; margin-top: 4px; }
+    .audio-pending-text { font-size: 1rem; color: #92400E; font-weight: 600; }
+    .audio-pending-sub { font-size: 0.88rem; color: #B45309; margin-top: 4px; }
 
     /* ── Divider ── */
     .timeline-dot {
@@ -220,11 +239,11 @@
 
     /* Icon colors */
     .ic-flight { background: #EFF6FF; }
-    .ic-hotel  { background: #F0FDF4; }
+    .ic-hotel  { background: #FFFBEB; }
     .ic-food   { background: #FFF7ED; }
     .ic-sight  { background: #FDF4FF; }
     .ic-boat   { background: #EFF6FF; }
-    .ic-walk   { background: #F0FDF4; }
+    .ic-walk   { background: #FFFBEB; }
     .ic-show   { background: #FFF7ED; }
     .ic-night  { background: #1E1B4B; }
   </style>
@@ -284,14 +303,14 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 小三通</div>
+            <audio controls src="audio/小三通.mp3"></audio>
+          </div>
           <div class="stop-desc">
             <p>大家好，我們現在搭的這班船，走的是「小三通」航線——從金門料羅港出發，橫越台灣海峽最窄的水道，大約30分鐘就能抵達廈門。</p>
             <p>別看這段路程短短的，它背後有段很特別的歷史。金門和廈門之間的距離只有約9公里，天氣好的時候，站在金門海邊，廈門的高樓大廈肉眼就看得到。但這兩岸之間，曾經有長達半世紀完全不能往來。1949年之後，這片海峽就像一道巨大的牆，把兩岸人民隔開。1958年的「八二三砲戰」，廈門對金門打了47萬發砲彈，金門島幾乎每天都活在砲聲之下。</p>
             <p>直到2001年，「小三通」才正式開通，讓台灣人可以從金門直接進入廈門。現在每天都有幾十個航班往返，兩岸之間那道看不見的牆，終於慢慢打開了一條縫。我們今天走的這段路，短短30分鐘，承載了幾十年的歷史。</p>
-          </div>
-          <div class="audio-player">
-            <div class="audio-player-title">🎙 小三通</div>
-            <audio controls src="audio/小三通.mp3"></audio>
           </div>
         </div>
       </div>
@@ -311,15 +330,15 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 第八市場</div>
+            <audio controls src="audio/第八市場.mp3"></audio>
+          </div>
           <div class="stop-desc">
             <p><strong>八市（第八市場）</strong></p>
             <p>八市的全名是「第八市場」，是廈門最有生活氣息的傳統市場，也是廈門人每天早上買菜的地方。</p>
             <p>這裡從清朝就有市場，已經有超過百年歷史。走進八市，你會看到各種叫不出名字的新鮮海產——廈門靠海，這裡的漁獲種類之多令人眼花撩亂，有各種貝類、螃蟹、魚、蝦，還有很多台灣不常見的品種。</p>
             <p>八市最迷人的地方是它的「煙火氣」——就是那種真實的、接地氣的生活感。攤販大聲叫賣、主婦們在討價還價、旁邊的早餐攤飄出沙茶麵的香味……這裡沒有刻意為觀光客設計的表演，就是廈門人最真實的日常生活。</p>
-          </div>
-          <div class="audio-player">
-            <div class="audio-player-title">🎙 第八市場</div>
-            <audio controls src="audio/第八市場.mp3"></audio>
           </div>
         </div>
       </div>
@@ -339,16 +358,15 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 中山路步行街</div>
+            <audio controls src="audio/中山路.mp3"></audio>
+          </div>
           <div class="stop-desc">
             <p>中山路是廈門最老的商業街，也是廈門人最驕傲的一條路。</p>
             <p>這條路建於1920年代，是廈門最早的現代化街道。最特別的是它的「騎樓」建築——就是把建築物的二樓延伸出來，蓋在人行道上方，讓行人不管下雨還是大太陽都可以在騎樓下行走，這是東南亞和閩南地區非常典型的建築風格，在台灣的一些老街也看得到。</p>
             <p>中山路上有廈門最老的餅店、最老的中藥行，還有各種閩南小吃。這裡也是廈門最早有電燈、有電話的地方。到了晚上，整條街的燈亮起來，騎樓的輪廓在夜色中特別漂亮。</p>
             <p>逛中山路，推薦一定要吃的是「沙茶麵」和「廈門燒肉粽」——這兩樣是廈門人的靈魂食物，和台灣的版本有些不同，味道很值得比較看看。</p>
-          </div>
-          <div class="audio-pending">
-            <div class="audio-pending-icon">🎙</div>
-            <div class="audio-pending-text">景點故事錄音即將上傳</div>
-            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
           </div>
         </div>
       </div>
@@ -368,16 +386,15 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 鷺江</div>
+            <audio controls src="audio/鷺江夜遊.mp3"></audio>
+          </div>
           <div class="stop-desc">
             <p><strong>鷺江夜遊</strong></p>
             <p>鷺江，就是廈門島和鼓浪嶼之間那片海峽。「鷺」是白鷺鷥，廈門的別稱就叫「鷺島」，因為以前島上有很多白鷺棲息。</p>
             <p>夜遊鷺江，坐在船上，左邊是廈門島璀璨的高樓夜景，右邊是鼓浪嶼靜謐的燈火，海風吹來，非常舒服。船上通常會播放南音——南音是閩南地區最古老的音樂，被稱為「中國音樂的活化石」，已經有一千多年歷史，聯合國也認定它是人類非物質文化遺產。</p>
             <p>坐在船上，聽著古老的南音，看著兩岸的燈火倒映在海面上，這是廈門給旅人最美的一個夜晚記憶。</p>
-          </div>
-          <div class="audio-pending">
-            <div class="audio-pending-icon">🎙</div>
-            <div class="audio-pending-text">景點故事錄音即將上傳</div>
-            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
           </div>
         </div>
       </div>
@@ -881,6 +898,20 @@
     card.closest('.day-section').querySelectorAll('.stop-card.open').forEach(c => c.classList.remove('open'));
     if (!wasOpen) card.classList.add('open');
   }
+
+  // 自動為每個景點文字加上「展開介紹」按鈕
+  document.querySelectorAll('.stop-desc').forEach(function(desc) {
+    var btn = document.createElement('button');
+    btn.className = 'desc-toggle';
+    btn.innerHTML = '📖 閱讀景點介紹 &nbsp;<span>▼</span>';
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      var isOpen = desc.classList.contains('open');
+      desc.classList.toggle('open');
+      this.querySelector('span').textContent = isOpen ? '▼' : '▲';
+    };
+    desc.parentNode.insertBefore(btn, desc);
+  });
 
   // ── How to add audio when ready ──────────────────────────────────────────
   // 1. Put your .mp3 files in the /audio folder, e.g. audio/gulangyu.mp3
