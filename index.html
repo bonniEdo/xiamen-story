@@ -8,19 +8,19 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue: #1D6FEB;
-      --blue-dark: #1550B8;
+      --yellow: #F59E0B;
+      --yellow-dark: #B45309;
+      --yellow-light: #FEF3C7;
+      --yellow-mid: #FDE68A;
+      --blue: #2563EB;
+      --blue-dark: #1D4ED8;
       --blue-light: #DBEAFE;
-      --blue-mid: #93C5FD;
-      --yellow: #FBBF24;
-      --yellow-dark: #D97706;
-      --yellow-light: #FEF9C3;
-      --bg: #EFF6FF;
+      --bg: #FFFBEB;
       --card-bg: #FFFFFF;
-      --text-dark: #1E3A5F;
-      --text-mid: #4B6FA8;
-      --text-light: #94B4D4;
-      --shadow: 0 4px 20px rgba(29,111,235,0.10);
+      --text-dark: #3B2000;
+      --text-mid: #78450A;
+      --text-light: #B97A3A;
+      --shadow: 0 4px 20px rgba(180,83,9,0.10);
       --radius: 20px;
     }
 
@@ -33,8 +33,8 @@
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(150deg, #1550B8 0%, #1D6FEB 60%, #3B8EF8 100%);
-      color: white;
+      background: linear-gradient(150deg, #F59E0B 0%, #FBBF24 55%, #FDE68A 100%);
+      color: #3B2000;
       padding: 52px 24px 68px;
       text-align: center;
       position: relative;
@@ -54,23 +54,23 @@
       position: absolute;
       top: -60px; right: -60px;
       width: 220px; height: 220px;
-      background: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.15);
       border-radius: 50%;
     }
     .hero-wave { font-size: 3rem; margin-bottom: 10px; }
     .hero h1 {
       font-size: 2.2rem; font-weight: 800;
       letter-spacing: 5px; margin-bottom: 8px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      text-shadow: 0 2px 8px rgba(180,83,9,0.15);
     }
-    .hero-sub { font-size: 1rem; opacity: 0.88; letter-spacing: 3px; }
+    .hero-sub { font-size: 1rem; opacity: 0.8; letter-spacing: 3px; }
     .hero-hotel {
       display: inline-flex; align-items: center; gap: 6px;
       margin-top: 18px; padding: 10px 20px;
-      background: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.35);
       border-radius: 50px; font-size: 0.9rem;
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.5);
     }
 
     /* ── Day Tabs ── */
@@ -78,7 +78,7 @@
       position: sticky; top: 0; z-index: 100;
       background: var(--bg);
       padding: 14px 0 0;
-      box-shadow: 0 2px 16px rgba(29,111,235,0.10);
+      box-shadow: 0 2px 16px rgba(180,83,9,0.10);
     }
     .tabs {
       display: flex; gap: 8px;
@@ -91,20 +91,20 @@
       flex-shrink: 0;
       padding: 10px 20px;
       border-radius: 50px;
-      border: 2px solid #BFDBFE;
+      border: 2px solid var(--yellow-mid);
       background: white;
       cursor: pointer;
       font-size: 1rem; font-weight: 600;
       color: var(--text-mid);
       transition: all 0.2s;
       white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(29,111,235,0.08);
+      box-shadow: 0 2px 8px rgba(180,83,9,0.08);
     }
     .tab-btn.active {
-      background: var(--blue);
-      color: white;
-      border-color: var(--blue);
-      box-shadow: 0 4px 16px rgba(29,111,235,0.35);
+      background: var(--yellow);
+      color: #3B2000;
+      border-color: var(--yellow);
+      box-shadow: 0 4px 16px rgba(245,158,11,0.40);
     }
     .tab-btn .tab-date { font-size: 0.88rem; opacity: 0.8; }
 
@@ -118,17 +118,17 @@
       margin-bottom: 20px;
     }
     .day-badge {
-      background: var(--yellow);
-      color: #7C3A00;
+      background: var(--blue);
+      color: white;
       font-size: 0.82rem; font-weight: 800;
       padding: 5px 14px; border-radius: 50px;
       letter-spacing: 1px;
-      box-shadow: 0 2px 8px rgba(251,191,36,0.35);
+      box-shadow: 0 2px 8px rgba(37,99,235,0.30);
     }
     .day-title { font-size: 1.3rem; font-weight: 700; color: var(--text-dark); }
     .day-charter {
       font-size: 0.82rem; padding: 5px 12px;
-      background: var(--blue-light); color: var(--blue);
+      background: var(--yellow-light); color: var(--yellow-dark);
       border-radius: 50px; font-weight: 600;
     }
 
@@ -144,8 +144,8 @@
     }
     .stop-card:active { transform: scale(0.985); }
     .stop-card.open {
-      border-color: var(--blue-mid);
-      box-shadow: 0 6px 28px rgba(29,111,235,0.14);
+      border-color: var(--yellow-mid);
+      box-shadow: 0 6px 28px rgba(245,158,11,0.18);
     }
 
     .stop-header {
@@ -155,7 +155,7 @@
     }
     .stop-time {
       font-size: 0.92rem; font-weight: 700;
-      color: var(--blue);
+      color: var(--yellow-dark);
       min-width: 40px;
     }
     .stop-icon {
@@ -168,7 +168,7 @@
     .stop-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; color: var(--text-dark); }
     .stop-note { font-size: 0.95rem; color: var(--text-mid); }
     .stop-arrow {
-      font-size: 1.1rem; color: var(--blue-mid);
+      font-size: 1.1rem; color: var(--yellow-mid);
       transition: transform 0.25s;
       font-weight: 700;
     }
