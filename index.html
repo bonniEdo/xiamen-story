@@ -31,8 +31,8 @@
 
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(160deg, #0D9488 0%, #065F46 60%, #1C4B3A 100%);
-      color: white;
+      background: linear-gradient(160deg, #F5E642 0%, #E8D820 60%, #C9B800 100%);
+      color: #5C4800;
       padding: 48px 24px 60px;
       text-align: center;
       position: relative;
@@ -166,11 +166,22 @@
     /* ── Expanded Panel ── */
     .stop-panel {
       max-height: 0; overflow: hidden;
-      transition: max-height 0.35s ease;
+      transition: max-height 0.4s ease;
       border-top: 1px solid #F5F5F4;
     }
-    .stop-card.open .stop-panel { max-height: 300px; }
+    .stop-card.open .stop-panel { max-height: 3000px; }
     .stop-panel-inner { padding: 16px 20px 20px; }
+
+    /* ── Story Text ── */
+    .stop-desc {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text-mid);
+      margin-bottom: 14px;
+    }
+    .stop-desc p + p {
+      margin-top: 10px;
+    }
 
     /* ── Audio Player ── */
     .audio-player {
@@ -259,7 +270,7 @@
       <span class="day-title">啟程・抵廈門</span>
     </div>
 
-    <!-- Cards for day 1 -->
+    <!-- 小三通 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">12:30</div>
@@ -273,17 +284,51 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
-        <div class="audio-player">
-          <div class="audio-player-title">🎙 景點故事</div>
-          <audio controls src="audio/小三通.mp3"></audio>
-        </div>
+          <div class="stop-desc">
+            <p>大家好，我們現在搭的這班船，走的是「小三通」航線——從金門料羅港出發，橫越台灣海峽最窄的水道，大約30分鐘就能抵達廈門。</p>
+            <p>別看這段路程短短的，它背後有段很特別的歷史。金門和廈門之間的距離只有約9公里，天氣好的時候，站在金門海邊，廈門的高樓大廈肉眼就看得到。但這兩岸之間，曾經有長達半世紀完全不能往來。1949年之後，這片海峽就像一道巨大的牆，把兩岸人民隔開。1958年的「八二三砲戰」，廈門對金門打了47萬發砲彈，金門島幾乎每天都活在砲聲之下。</p>
+            <p>直到2001年，「小三通」才正式開通，讓台灣人可以從金門直接進入廈門。現在每天都有幾十個航班往返，兩岸之間那道看不見的牆，終於慢慢打開了一條縫。我們今天走的這段路，短短30分鐘，承載了幾十年的歷史。</p>
+          </div>
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 小三通</div>
+            <audio controls src="audio/小三通.mp3"></audio>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- 八市 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
-        <div class="stop-time"></div>
+        <div class="stop-time">下午</div>
+        <div class="stop-icon ic-night">🌃</div>
+        <div class="stop-info">
+          <div class="stop-name">八市</div>
+          <div class="stop-note">廈門傳統市場</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p><strong>八市（第八市場）</strong></p>
+            <p>八市的全名是「第八市場」，是廈門最有生活氣息的傳統市場，也是廈門人每天早上買菜的地方。</p>
+            <p>這裡從清朝就有市場，已經有超過百年歷史。走進八市，你會看到各種叫不出名字的新鮮海產——廈門靠海，這裡的漁獲種類之多令人眼花撩亂，有各種貝類、螃蟹、魚、蝦，還有很多台灣不常見的品種。</p>
+            <p>八市最迷人的地方是它的「煙火氣」——就是那種真實的、接地氣的生活感。攤販大聲叫賣、主婦們在討價還價、旁邊的早餐攤飄出沙茶麵的香味……這裡沒有刻意為觀光客設計的表演，就是廈門人最真實的日常生活。</p>
+          </div>
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 第八市場</div>
+            <audio controls src="audio/第八市場.mp3"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中山路 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">下午</div>
         <div class="stop-icon ic-food">🍜</div>
         <div class="stop-info">
           <div class="stop-name">中山路</div>
@@ -294,6 +339,12 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>中山路是廈門最老的商業街，也是廈門人最驕傲的一條路。</p>
+            <p>這條路建於1920年代，是廈門最早的現代化街道。最特別的是它的「騎樓」建築——就是把建築物的二樓延伸出來，蓋在人行道上方，讓行人不管下雨還是大太陽都可以在騎樓下行走，這是東南亞和閩南地區非常典型的建築風格，在台灣的一些老街也看得到。</p>
+            <p>中山路上有廈門最老的餅店、最老的中藥行，還有各種閩南小吃。這裡也是廈門最早有電燈、有電話的地方。到了晚上，整條街的燈亮起來，騎樓的輪廓在夜色中特別漂亮。</p>
+            <p>逛中山路，推薦一定要吃的是「沙茶麵」和「廈門燒肉粽」——這兩樣是廈門人的靈魂食物，和台灣的版本有些不同，味道很值得比較看看。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -303,19 +354,26 @@
       </div>
     </div>
 
+    <!-- 鷺江夜遊 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">晚上</div>
         <div class="stop-icon ic-night">🌃</div>
         <div class="stop-info">
-          <div class="stop-name">八市夜遊・鷺江</div>
-          <div class="stop-note">廈門傳統市場 + 鷺江夜景</div>
+          <div class="stop-name">鷺江夜遊</div>
+          <div class="stop-note">鷺江夜景</div>
           <div class="audio-badge pending">🎙 故事即將上線</div>
         </div>
         <div class="stop-arrow">›</div>
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p><strong>鷺江夜遊</strong></p>
+            <p>鷺江，就是廈門島和鼓浪嶼之間那片海峽。「鷺」是白鷺鷥，廈門的別稱就叫「鷺島」，因為以前島上有很多白鷺棲息。</p>
+            <p>夜遊鷺江，坐在船上，左邊是廈門島璀璨的高樓夜景，右邊是鼓浪嶼靜謐的燈火，海風吹來，非常舒服。船上通常會播放南音——南音是閩南地區最古老的音樂，被稱為「中國音樂的活化石」，已經有一千多年歷史，聯合國也認定它是人類非物質文化遺產。</p>
+            <p>坐在船上，聽著古老的南音，看著兩岸的燈火倒映在海面上，這是廈門給旅人最美的一個夜晚記憶。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -334,6 +392,7 @@
       <span class="day-charter">🚗 一日包車</span>
     </div>
 
+    <!-- 集美學村・大社 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">08:30</div>
@@ -347,6 +406,12 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>集美學村，是廈門最重要的文化地標之一，也是一個充滿故事的地方。</p>
+            <p>這裡是愛國華僑陳嘉庚先生一手建立的。陳嘉庚是福建人，年輕時去南洋（也就是東南亞）經商，靠著橡膠和菠蘿罐頭生意，成為當時的大富豪。但他賺到錢之後，沒有只想著自己享受，而是把大部分的財富拿來辦教育——因為他深深相信，要讓中國強大，就必須先讓老百姓受教育。</p>
+            <p>他用自己的錢，在家鄉集美辦了從小學、中學、到大學的一整套學校，還蓋了圖書館、體育館、學生宿舍。最厲害的是，他後來生意遇到困難，破產了，但他還是堅持繼續辦學，甚至變賣家產、借錢也要讓學校繼續運作。他說過一句很有名的話：「死後捐獻所有財產給社會。」</p>
+            <p>現在我們走進集美學村，可以看到那些融合閩南風格和南洋風格的建築，紅磚燕尾脊的屋頂，配上西式的廊柱，非常獨特。這些建築不只是好看，每一棟背後都是陳嘉庚先生用血汗錢蓋起來的。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -356,6 +421,7 @@
       </div>
     </div>
 
+    <!-- 嘉庚公園 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time"></div>
@@ -369,6 +435,11 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>嘉庚公園就在集美學村旁邊，是為了紀念陳嘉庚先生而建的。公園裡有他的陵墓「鰲園」，墓園的圍牆上雕刻了超過600幅的歷史浮雕，從世界史到中國史都有，據說陳嘉庚親自監督設計，花了十幾年才完成。</p>
+            <p>這裡還有一座「陳嘉庚紀念館」，裡面展示了他一生的故事和珍貴文物。如果你想更了解這位了不起的老人，進去走一走非常值得。</p>
+            <p>旁邊的「大社」是集美的老聚落，陳嘉庚就是在這裡出生長大的。走在老街裡，可以感受到閩南傳統聚落的生活氣息，和學村的書香氣質形成有趣的對比。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -378,12 +449,13 @@
       </div>
     </div>
 
+    <!-- 午餐 朱富貴 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">11:30</div>
         <div class="stop-icon ic-food">🥢</div>
         <div class="stop-info">
-          <div class="stop-name">午餐</div>
+          <div class="stop-name">午餐・朱富貴</div>
           <div class="stop-note">品嚐在地閩南料理</div>
           <div class="audio-badge pending">🎙 故事即將上線</div>
         </div>
@@ -391,6 +463,10 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>朱富貴是廈門非常老字號的閩南菜館，在廈門當地人心中有特殊的地位。</p>
+            <p>廈門菜屬於閩南菜系，口味清淡、注重食材原味，善用海鮮，調味偏甜微鹹，和台灣菜有很深的淵源——其實台灣很多傳統菜，根源就是從閩南傳過來的。來廈門吃一頓道地的閩南菜，你可能會吃到很多「好像在哪裡吃過」的熟悉感，但又有一點點不一樣，非常有意思。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -400,6 +476,7 @@
       </div>
     </div>
 
+    <!-- 閩南傳奇秀 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">14:30</div>
@@ -422,6 +499,7 @@
       </div>
     </div>
 
+    <!-- 曾安厝大街・沙波尾 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">傍晚</div>
@@ -444,6 +522,7 @@
       </div>
     </div>
 
+    <!-- 雙子星 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">晚上</div>
@@ -457,6 +536,10 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>廈門雙子星是廈門最新的地標建築，兩棟高達300多公尺的摩天大樓，外型像兩個並肩而立的巨人，是廈門的新天際線。</p>
+            <p>站在觀景台上，整個廈門島、鼓浪嶼、廈門大橋盡收眼底，夜景尤其壯觀。白天你看的是集美學村、中山路這些老廈門的故事；晚上站在這裡，看的是廈門的未來。新與舊的對比，是廈門這座城市最有趣的地方。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -475,6 +558,7 @@
       <span class="day-charter">🚗 包車接送</span>
     </div>
 
+    <!-- 雲水謠 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">07:30</div>
@@ -488,6 +572,10 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>土樓是福建山區客家人和閩南人蓋的大型圓形或方形建築，一棟樓裡可以住幾十戶人家，是幾百年前人們為了防盜、防野獸、大家族共同生活而發展出來的獨特建築形式，2008年被列為世界文化遺產。</p>
+            <p>雲水謠是附近的一條古道和溪流，兩岸有幾百年樹齡的大榕樹，樹根盤根錯節，非常壯觀。這裡也是電影《雲水謠》的拍攝地，那是一部關於兩岸情感的愛情電影。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -497,6 +585,7 @@
       </div>
     </div>
 
+    <!-- 和貴樓 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time"></div>
@@ -510,6 +599,9 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>和貴樓是土樓裡的一個奇蹟——它蓋在沼澤地上！建造者打了200多根松木樁插進沼澤裡當地基，整棟樓就這樣「漂浮」在軟泥上，蓋好至今已有將近300年，樓還是穩穩的，用筷子插進樓內地面，還會感覺到地面在輕微搖動。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -519,6 +611,7 @@
       </div>
     </div>
 
+    <!-- 懷遠樓 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time"></div>
@@ -532,6 +625,9 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>懷遠樓以精緻的雕刻和彩繪聞名，內部保存非常完好，被稱為「土樓中的藝術品」。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -541,6 +637,7 @@
       </div>
     </div>
 
+    <!-- 午餐 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">12:00</div>
@@ -563,19 +660,30 @@
       </div>
     </div>
 
+    <!-- 田螺坑 + 裕昌樓 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">下午</div>
         <div class="stop-icon ic-sight">📸</div>
         <div class="stop-info">
-          <div class="stop-name">田螺坑景區</div>
-          <div class="stop-note">上下景觀台拍照・裕昌樓</div>
+          <div class="stop-name">田螺坑景區・裕昌樓</div>
+          <div class="stop-note">上下景觀台拍照・最古老土樓</div>
           <div class="audio-badge pending">🎙 故事即將上線</div>
         </div>
         <div class="stop-arrow">›</div>
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p><strong>田螺坑景區</strong></p>
+            <p>田螺坑土樓群，是所有土樓裡最「上鏡」的一個組合——四個圓樓加一個方樓，分佈在山坡上，從高處俯瞰，像是從天上撒下來的幾枚銅錢，又像是一朵盛開的梅花。</p>
+            <p>這個組合太特別了，2008年北京奧運的主題郵票，用的就是田螺坑土樓群的圖案。有美國衛星第一次拍到這裡的時候，還以為這是中國的秘密核武基地——因為那幾個完美的圓形實在太整齊了！後來美方派人來一看，才發現是幾百年前農民蓋的房子，哭笑不得。</p>
+            <p>上下兩個觀景台各有不同角度，上台看全景、下台感受土樓的壯觀尺度，兩個都值得去。</p>
+            <p><strong>裕昌樓</strong></p>
+            <p>裕昌樓是現存最古老的土樓，建於元朝末年，距今大約有700年歷史！</p>
+            <p>最神奇的地方是它的柱子——整棟樓的柱子和樓梯都是歪的，最大的傾斜角度有15度，看起來隨時要倒塌，但就這樣歪了700年還沒倒。據說是當初建造時工匠技術不夠精準，結果反而歪出了一種奇特的美感，當地人叫它「東歪西倒樓」。</p>
+            <p>站在樓裡往上看，那些傾斜的木頭結構有一種魔幻的視覺效果，非常難忘。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -593,6 +701,7 @@
       <span class="day-title">鼓浪嶼・慢遊一整天</span>
     </div>
 
+    <!-- 前往鼓浪嶼 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">08:30</div>
@@ -606,6 +715,12 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>鼓浪嶼，是廈門最浪漫的地方，也是中國最特別的小島之一。</p>
+            <p>這個只有1.8平方公里的小島，步行一圈大概兩個小時，島上沒有汽車，只有步行和少數電動車。鼓浪嶼的名字來自島上一塊會發出鼓聲的礁石——每當漲潮，海浪打進礁石縫隙，就會發出「咚咚咚」的聲音，像鑼鼓在響。</p>
+            <p>19世紀末，鼓浪嶼成為各國租界，英國、美國、德國、日本等13個國家先後在這裡設立領事館，帶來了各式各樣的西洋建築。所以今天走在鼓浪嶼，你會看到哥德式教堂、巴洛克式別墅、閩南紅磚老厝混在一起，非常奇特。</p>
+            <p>鼓浪嶼還有一個特別的稱號：「鋼琴之島」。這裡的居民特別愛音樂，據說島上一度每40個人就有一台鋼琴，走在小巷裡，常常可以聽到不知哪戶人家傳出的琴聲。2017年，鼓浪嶼正式被列為世界文化遺產。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -615,6 +730,7 @@
       </div>
     </div>
 
+    <!-- 島上漫步 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">全天</div>
@@ -637,6 +753,7 @@
       </div>
     </div>
 
+    <!-- 回廈門 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">19:00</div>
@@ -667,6 +784,7 @@
       <span class="day-title">南普陀・返台</span>
     </div>
 
+    <!-- 南普陀 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">08:30</div>
@@ -680,6 +798,11 @@
       </div>
       <div class="stop-panel">
         <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>南普陀寺，是廈門最重要的佛教聖地，也是閩南佛教文化的中心。</p>
+            <p>這座寺廟建於唐朝，距今超過一千年，依山而建，背靠五老峰，面朝大海，風水極佳。「南普陀」這個名字，是因為供奉觀世音菩薩，而觀音菩薩的道場在浙江普陀山，這裡在普陀山之南，所以叫「南普陀」。</p>
+            <p>寺裡香火鼎盛，每天都有大批信徒和遊客前來。這裡有一樣東西全中國聞名——就是南普陀的「素菜」。南普陀寺的素食料理，是中國最有名的素食之一，廚師用豆腐、蔬菜、素材，做出「假雞」「假魚」「假螃蟹」，造型惟妙惟肖、口感細膩，連不吃素的人都讚不絕口。如果有機會，非常推薦在這裡吃一頓素齋。</p>
+          </div>
           <div class="audio-pending">
             <div class="audio-pending-icon">🎙</div>
             <div class="audio-pending-text">景點故事錄音即將上傳</div>
@@ -689,6 +812,7 @@
       </div>
     </div>
 
+    <!-- 搭船返台 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">12:00</div>
@@ -711,6 +835,7 @@
       </div>
     </div>
 
+    <!-- 飛機 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time">16:40</div>
