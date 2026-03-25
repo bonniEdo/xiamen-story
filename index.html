@@ -240,8 +240,7 @@
     }
 
     .day-header {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      display: flex;
       align-items: center;
       gap: 12px;
       margin: 8px 4px 24px;
@@ -270,6 +269,7 @@
       color: var(--mocha);
       border-radius: 999px;
       font-weight: 600;
+      margin-left: auto;
     }
 
     /* ── Stop Card ── */
@@ -496,6 +496,81 @@
     .ic-show   { background: #f2e1d7; }
     .ic-night  { background: #514438; color: #fff7dc; }
 
+    /* ── Journey Route Bar (vertical, centered) ── */
+    .journey-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 24px;
+      padding: 28px 24px;
+      background: rgba(248, 239, 210, 0.42);
+      border-radius: var(--radius-md);
+    }
+    .journey-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .journey-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 252, 242, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(95, 76, 46, 0.11);
+    }
+    .journey-step.dest .journey-icon {
+      background: rgba(237, 216, 138, 0.62);
+    }
+    .journey-info {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .journey-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .journey-time {
+      font-size: 0.84rem;
+      color: var(--mocha);
+      letter-spacing: 0.5px;
+    }
+    .journey-arrow {
+      display: flex;
+      justify-content: center;
+      width: 2px;
+      height: 28px;
+      border-left: 2px dashed rgba(122, 97, 64, 0.28);
+      margin: 4px 0;
+    }
+
+    /* ── Meal Info ── */
+    .meal-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .meal-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(244, 231, 193, 0.5);
+      color: var(--mocha);
+      font-weight: 600;
+    }
+
     @keyframes fadeUp {
       from {
         opacity: 0;
@@ -508,55 +583,137 @@
     }
 
     @media (max-width: 640px) {
-      body::before {
-        inset: 12px;
-        border-radius: 24px;
-      }
       .hero {
-        padding: 48px 16px 34px;
+        padding: 36px 14px 28px;
       }
       .hero-inner {
-        padding: 28px 20px;
+        padding: 24px 18px;
+        border-radius: 28px;
       }
       .hero h1 {
-        letter-spacing: 5px;
+        font-size: clamp(2rem, 8vw, 3rem);
+        letter-spacing: 4px;
       }
-      .hero-note {
-        font-size: 0.98rem;
+      .hero-sub {
+        font-size: 0.88rem;
+        letter-spacing: 2px;
+      }
+      .hero-meta {
+        gap: 8px;
+      }
+      .hero-hotel {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+        text-align: center;
+      }
+      .tabs-wrapper {
+        padding: 10px 0 8px;
       }
       .tabs {
-        padding: 0 16px;
+        padding: 0 14px;
+        gap: 7px;
+      }
+      .tab-btn {
+        min-width: 88px;
+        padding: 10px 14px;
+        font-size: 0.88rem;
+      }
+      .tab-btn .tab-date {
+        font-size: 0.74rem;
       }
       .content {
-        padding: 24px 16px 64px;
-      }
-      .intro-card {
-        padding: 22px 18px 20px;
+        padding: 20px 14px 60px;
       }
       .day-header {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
       }
-      .day-charter {
-        justify-self: start;
+      .day-title {
+        font-size: 1.22rem;
+      }
+      .stop-card {
+        border-radius: 20px;
+        margin-bottom: 10px;
       }
       .stop-header {
-        gap: 12px;
-        padding: 20px 18px 18px 20px;
+        gap: 11px;
+        padding: 16px 16px 14px 16px;
       }
       .stop-time {
-        min-width: 52px;
-        font-size: 0.8rem;
+        min-width: 46px;
+        padding: 7px 8px;
+        font-size: 0.76rem;
+        border-radius: 10px;
       }
       .stop-icon {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 1.25rem;
       }
       .stop-name {
-        font-size: 1.08rem;
+        font-size: 1rem;
+      }
+      .stop-note {
+        font-size: 0.88rem;
+      }
+      .stop-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
       }
       .stop-panel-inner {
-        padding: 16px 20px 20px;
+        padding: 14px 16px 18px;
+      }
+      .stop-desc {
+        font-size: 0.96rem;
+        line-height: 1.82;
+      }
+      .audio-player, .audio-pending {
+        padding: 14px;
+        border-radius: 14px;
+      }
+      .desc-toggle {
+        font-size: 0.88rem;
+        padding: 10px 14px;
+      }
+      .journey-bar {
+        padding: 22px 18px;
+      }
+      .journey-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+      }
+      .journey-label {
+        font-size: 0.92rem;
+      }
+      .journey-time {
+        font-size: 0.78rem;
+      }
+      .journey-arrow {
+        height: 22px;
+      }
+      .footer {
+        font-size: 0.78rem;
+        padding-bottom: 36px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .tab-btn {
+        min-width: 76px;
+        padding: 9px 10px;
+        font-size: 0.82rem;
+      }
+      .stop-header {
+        gap: 9px;
+        padding: 14px 12px 12px 14px;
+      }
+      .stop-time {
+        min-width: 40px;
+        font-size: 0.72rem;
       }
     }
   </style>
@@ -601,8 +758,27 @@
   <!-- Day 1 -->
   <div class="day-section active" id="day-0">
     <div class="day-header">
-      <span class="day-badge">DAY 1</span>
-      <span class="day-title">啟程・抵廈門</span>
+      <span class="day-title">啟程✈️・松山直飛金門</span>
+    </div>
+
+    <!-- 出發路線 -->
+    <div class="journey-bar">
+      <div class="journey-step">
+        <div class="journey-icon">✈️</div>
+        <div class="journey-info">
+          <span class="journey-label">松山機場</span>
+          <span class="journey-time">08:10</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">🏝️</div>
+        <div class="journey-info">
+          <span class="journey-label">金門</span>
+          <span class="journey-time">09:30</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
     </div>
 
     <!-- 小三通 -->
@@ -631,6 +807,17 @@
         </div>
       </div>
     </div>
+    <div class="journey-bar">
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">🏨</div>
+        <div class="journey-info">
+          <span class="journey-label">飯店放行李</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+    </div>
+
 
     <!-- 八市 -->
     <div class="stop-card" onclick="toggleCard(this)">
@@ -720,16 +907,15 @@
   <!-- Day 2 -->
   <div class="day-section" id="day-1">
     <div class="day-header">
-      <span class="day-badge">DAY 2</span>
       <span class="day-title">集美・閩南文化</span>
-      <span class="day-charter">🚗 一日包車</span>
+      <span class="day-charter">🚌 包車接送</span>
     </div>
 
     <!-- 海上小火車 -->
     <div class="stop-card" onclick="toggleCard(this)">
       <div class="stop-header">
         <div class="stop-time"></div>
-        <div class="stop-icon ic-food">🥢</div>
+        <div class="stop-icon ic-food">🚂</div>
         <div class="stop-info">
           <div class="stop-name">海上小火車</div>
           <div class="stop-note">體驗廈門獨特的交通方式</div>
@@ -888,9 +1074,8 @@
   <!-- Day 3 -->
   <div class="day-section" id="day-2">
     <div class="day-header">
-      <span class="day-badge">DAY 3</span>
       <span class="day-title">土樓之旅・雲水謠</span>
-      <span class="day-charter">🚗 包車接送</span>
+      <span class="day-charter">🚌 包車接送</span>
     </div>
 
     <!-- 雲水謠 -->
@@ -1032,7 +1217,6 @@
   <!-- Day 4 -->
   <div class="day-section" id="day-3">
     <div class="day-header">
-      <span class="day-badge">DAY 4</span>
       <span class="day-title">鼓浪嶼・慢遊一整天</span>
     </div>
 
@@ -1115,8 +1299,7 @@
   <!-- Day 5 -->
   <div class="day-section" id="day-4">
     <div class="day-header">
-      <span class="day-badge">DAY 5</span>
-      <span class="day-title">南普陀・返台</span>
+      <span class="day-title">南普陀・✈️ 金門飛台</span>
     </div>
 
     <!-- 南普陀 -->
@@ -1147,48 +1330,30 @@
       </div>
     </div>
 
-    <!-- 搭船返台 -->
-    <div class="stop-card" onclick="toggleCard(this)">
-      <div class="stop-header">
-        <div class="stop-time">12:00</div>
-        <div class="stop-icon ic-boat">⛴️</div>
-        <div class="stop-info">
-          <div class="stop-name">搭船・踏上歸途</div>
-          <div class="stop-note">回家囉！</div>
-          <div class="audio-badge pending">🎙 故事即將上線</div>
-        </div>
-        <div class="stop-arrow">›</div>
-      </div>
-      <div class="stop-panel">
-        <div class="stop-panel-inner">
-          <div class="audio-pending">
-            <div class="audio-pending-icon">🎙</div>
-            <div class="audio-pending-text">景點故事錄音即將上傳</div>
-            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
-          </div>
+    <!-- 回程路線 -->
+    <div class="journey-bar">
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">⛴️</div>
+        <div class="journey-info">
+          <span class="journey-label">小三通</span>
+          <span class="journey-time">13:00</span>
         </div>
       </div>
-    </div>
-
-    <!-- 飛機 -->
-    <div class="stop-card" onclick="toggleCard(this)">
-      <div class="stop-header">
-        <div class="stop-time">16:40</div>
-        <div class="stop-icon ic-flight">✈️</div>
-        <div class="stop-info">
-          <div class="stop-name">飛機起飛</div>
-          <div class="stop-note">17:50 抵台北機場・旅程圓滿結束 🎉</div>
-          <div class="audio-badge pending">🎙 故事即將上線</div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">✈️</div>
+        <div class="journey-info">
+          <span class="journey-label">金門起飛</span>
+          <span class="journey-time">16:40</span>
         </div>
-        <div class="stop-arrow">›</div>
       </div>
-      <div class="stop-panel">
-        <div class="stop-panel-inner">
-          <div class="audio-pending">
-            <div class="audio-pending-icon">🎙</div>
-            <div class="audio-pending-text">景點故事錄音即將上傳</div>
-            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
-          </div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step dest">
+        <div class="journey-icon">🏠</div>
+        <div class="journey-info">
+          <span class="journey-label">松山機場</span>
+          <span class="journey-time">17:50</span>
         </div>
       </div>
     </div>
