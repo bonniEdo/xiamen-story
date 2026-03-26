@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>廈門之旅 ✈️</title>
+  <meta property="og:title" content="🌊廈門之旅 " />
+  <meta property="og:description" content="探索廈門的美麗風景和豐富文化" />
+  <meta property="og:type" content="website" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --butter: #f4e7a8;
+      --butter-soft: #fbf1ca;
+      --goose: #edd88a;
+      --cream: #fcf7eb;
+      --paper: #fffdf6;
+      --mist: #f6efe1;
+      --olive: #8b8664;
+      --olive-soft: #dfe2cc;
+      --mocha: #7a6140;
+      --ink: #352a1f;
+      --muted: #6f614c;
+      --line: #e7dbc1;
+      --line-strong: #d6c49a;
+      --shadow-lg: 0 18px 42px rgba(95, 76, 46, 0.14);
+      --shadow-md: 0 10px 28px rgba(95, 76, 46, 0.1);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Noto Serif TC", "Songti TC", serif;
+      background:
+        radial-gradient(circle at left top, rgba(255, 245, 191, 0.82), transparent 34%),
+        radial-gradient(circle at 88% 16%, rgba(243, 221, 150, 0.42), transparent 28%),
+        linear-gradient(180deg, #fdf8ee 0%, #f8f0df 45%, #fdf9ef 100%);
+      color: var(--ink);
+      min-height: 100vh;
+      position: relative;
+    }
+
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 20px 46px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      right: -150px;
+      bottom: -180px;
+      background: rgba(237, 216, 138, 0.26);
+      border-radius: 50%;
+      filter: blur(4px);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -120px;
+      width: 320px;
+      height: 320px;
+      background: rgba(255, 255, 255, 0.32);
+      border-radius: 50%;
+    }
+    .hero-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 34px 28px;
+      border-radius: 36px;
+      background: linear-gradient(145deg, rgba(255, 253, 247, 0.94), rgba(250, 240, 210, 0.84));
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-wave {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      margin-bottom: 16px;
+      border-radius: 999px;
+      background: rgba(237, 216, 138, 0.28);
+      color: var(--mocha);
+      font-size: 0.76rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      font-weight: 700;
+      letter-spacing: 9px;
+      margin-bottom: 10px;
+      font-style: italic;
+      color: var(--ink);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      letter-spacing: 4px;
+      color: var(--mocha);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-note {
+      max-width: 560px;
+      margin: 20px auto 0;
+      font-size: 1.06rem;
+      line-height: 1.9;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-hotel {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(237, 216, 138, 0.22);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--mocha);
+    }
+    .hero-stamp {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(237, 216, 138, 0.42);
+      color: var(--ink);
+      font-size: 0.86rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* ── Day Tabs ── */
+    .tabs-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 12px 0 10px;
+      background: rgba(251, 245, 230, 0.9);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(95, 76, 46, 0.08);
+    }
+    .tabs {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 0 20px;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex-shrink: 0;
+      min-width: 118px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(244, 231, 193, 0.32);
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.2s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--butter-soft), var(--goose));
+      color: var(--ink);
+      box-shadow: 0 8px 20px rgba(173, 145, 88, 0.22);
+      transform: translateY(-1px);
+    }
+    .tab-btn .tab-date {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
+      opacity: 0.72;
+    }
+
+    /* ── Day Sections ── */
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 28px 20px 72px;
+      position: relative;
+      z-index: 1;
+    }
+    .intro-card {
+      position: relative;
+      margin-bottom: 28px;
+      padding: 24px 24px 22px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 252, 244, 0.88);
+      box-shadow: var(--shadow-md);
+    }
+    .intro-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--mocha);
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .intro-card p {
+      max-width: 650px;
+      font-size: 1rem;
+      line-height: 1.95;
+      color: var(--muted);
+    }
+    .day-section { display: none; }
+    .day-section.active {
+      display: block;
+      animation: fadeUp 0.45s ease;
+    }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 8px 4px 24px;
+      padding-bottom: 16px;
+    }
+    .day-badge {
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 8px 13px;
+      border-radius: 999px;
+      letter-spacing: 2px;
+    }
+    .day-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink);
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+    .day-charter {
+      font-size: 0.82rem;
+      padding: 8px 12px;
+      background: rgba(237, 216, 138, 0.38);
+      color: var(--mocha);
+      border-radius: 999px;
+      font-weight: 600;
+      margin-left: auto;
+    }
+
+    /* ── Stop Card ── */
+    .stop-card {
+      position: relative;
+      background: rgba(255, 253, 248, 0.9);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 14px;
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      backdrop-filter: blur(8px);
+    }
+    .stop-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    .stop-card.open {
+      box-shadow: 0 20px 40px rgba(95, 76, 46, 0.16);
+      background: linear-gradient(180deg, rgba(255, 254, 250, 0.98), rgba(252, 246, 227, 0.94));
+    }
+
+    .stop-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 22px 22px 20px 24px;
+      cursor: pointer;
+    }
+    .stop-header:focus-visible {
+      outline: 2px solid rgba(173, 145, 88, 0.72);
+      outline-offset: -2px;
+    }
+    .stop-time {
+      min-width: 58px;
+      padding: 9px 10px;
+      border-radius: var(--radius-sm);
+      background: rgba(237, 216, 138, 0.24);
+      color: var(--mocha);
+      text-align: center;
+      font-size: 0.84rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .stop-time:empty {
+      opacity: 0;
+    }
+    .stop-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      flex-shrink: 0;
+    }
+    .stop-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .stop-name {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: var(--ink);
+      letter-spacing: 0.4px;
+    }
+    .stop-note {
+      font-size: 0.96rem;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+    .stop-arrow {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--mocha);
+      background: rgba(237, 216, 138, 0.32);
+      transition: transform 0.25s;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .stop-card.open .stop-arrow {
+      transform: rotate(90deg);
+      background: var(--goose);
+    }
+
+    /* audio badge */
+    .audio-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: rgba(237, 216, 138, 0.36);
+      color: var(--mocha);
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    .audio-badge.pending {
+      background: rgba(220, 218, 202, 0.6);
+      color: #6c6a54;
+    }
+
+    /* ── Expanded Panel ── */
+    .stop-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .stop-card.open .stop-panel {
+      max-height: 3000px;
+    }
+    .stop-panel-inner { padding: 18px 24px 24px; }
+
+    /* ── Story Text ── */
+    .stop-desc {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--muted);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease, margin 0.45s ease, padding 0.45s ease;
+      background: rgba(251, 245, 224, 0.7);
+      border-radius: var(--radius-md);
+      padding: 0 18px;
+    }
+    .stop-desc.open {
+      max-height: 3000px;
+      margin-top: 16px;
+      padding: 18px;
+    }
+    .stop-desc p + p { margin-top: 10px; }
+
+    /* ── Description Toggle ── */
+    .desc-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(237, 216, 138, 0.18);
+      color: var(--mocha);
+      border: none;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 12px;
+      font-family: inherit;
+    }
+    .desc-toggle:hover {
+      background: rgba(237, 216, 138, 0.36);
+    }
+    .desc-toggle.open {
+      background: var(--butter-soft);
+    }
+
+    /* ── Audio Player ── */
+    .audio-player {
+      background: rgba(248, 239, 210, 0.6);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+    .audio-player-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--mocha);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    audio {
+      width: 100%;
+      height: 46px;
+      border-radius: 10px;
+      filter: sepia(0.18) saturate(0.86);
+    }
+    .audio-pending {
+      background: rgba(248, 239, 210, 0.6);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+    }
+    .audio-pending-icon { font-size: 2rem; margin-bottom: 6px; }
+    .audio-pending-text { font-size: 1rem; color: var(--mocha); font-weight: 600; }
+    .audio-pending-sub { font-size: 0.88rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── Divider ── */
+    .timeline-dot {
+      text-align: center;
+      padding: 4px 0;
+      color: rgba(122, 97, 64, 0.52);
+      font-size: 0.8rem;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 20px 42px;
+      color: rgba(122, 97, 64, 0.78);
+      font-size: 0.84rem;
+      letter-spacing: 1px;
+    }
+
+    /* Icon colors */
+    .ic-flight { background: #f6edd3; }
+    .ic-hotel  { background: #f5e1d0; }
+    .ic-food   { background: #faefc9; }
+    .ic-sight  { background: #ece9d9; }
+    .ic-boat   { background: #efe7c9; }
+    .ic-walk   { background: #f6e7ba; }
+    .ic-show   { background: #f2e1d7; }
+    .ic-night  { background: #514438; color: #fff7dc; }
+
+    /* ── Journey Route Bar (vertical, centered) ── */
+    .journey-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 24px;
+      padding: 28px 24px;
+      background: rgba(248, 239, 210, 0.42);
+      border-radius: var(--radius-md);
+    }
+    .journey-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .journey-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 252, 242, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(95, 76, 46, 0.11);
+    }
+    .journey-step.dest .journey-icon {
+      background: rgba(237, 216, 138, 0.62);
+    }
+    .journey-info {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .journey-label {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .journey-time {
+      font-size: 0.84rem;
+      color: var(--mocha);
+      letter-spacing: 0.5px;
+    }
+    .journey-arrow {
+      display: flex;
+      justify-content: center;
+      width: 2px;
+      height: 28px;
+      border-left: 2px dashed rgba(122, 97, 64, 0.28);
+      margin: 4px 0;
+    }
+
+    /* ── Meal Info ── */
+    .meal-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .meal-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.76rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(244, 231, 193, 0.5);
+      color: var(--mocha);
+      font-weight: 600;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 36px 14px 28px;
+      }
+      .hero-inner {
+        padding: 24px 18px;
+        border-radius: 28px;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+        letter-spacing: 4px;
+      }
+      .hero-sub {
+        font-size: 0.88rem;
+        letter-spacing: 2px;
+      }
+      .hero-meta {
+        gap: 8px;
+      }
+      .hero-hotel {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+        text-align: center;
+      }
+      .tabs-wrapper {
+        padding: 10px 0 8px;
+      }
+      .tabs {
+        padding: 0 14px;
+        gap: 7px;
+      }
+      .tab-btn {
+        min-width: 88px;
+        padding: 10px 14px;
+        font-size: 0.88rem;
+      }
+      .tab-btn .tab-date {
+        font-size: 0.74rem;
+      }
+      .content {
+        padding: 20px 14px 60px;
+      }
+      .day-header {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+      .day-title {
+        font-size: 1.22rem;
+      }
+      .stop-card {
+        border-radius: 20px;
+        margin-bottom: 10px;
+      }
+      .stop-header {
+        gap: 11px;
+        padding: 16px 16px 14px 16px;
+      }
+      .stop-time {
+        min-width: 46px;
+        padding: 7px 8px;
+        font-size: 0.76rem;
+        border-radius: 10px;
+      }
+      .stop-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 1.25rem;
+      }
+      .stop-name {
+        font-size: 1rem;
+      }
+      .stop-note {
+        font-size: 0.88rem;
+      }
+      .stop-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 1rem;
+      }
+      .stop-panel-inner {
+        padding: 14px 16px 18px;
+      }
+      .stop-desc {
+        font-size: 0.96rem;
+        line-height: 1.82;
+      }
+      .audio-player, .audio-pending {
+        padding: 14px;
+        border-radius: 14px;
+      }
+      .desc-toggle {
+        font-size: 0.88rem;
+        padding: 10px 14px;
+      }
+      .journey-bar {
+        padding: 22px 18px;
+      }
+      .journey-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+      }
+      .journey-label {
+        font-size: 0.92rem;
+      }
+      .journey-time {
+        font-size: 0.78rem;
+      }
+      .journey-arrow {
+        height: 22px;
+      }
+      .footer {
+        font-size: 0.78rem;
+        padding-bottom: 36px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .tab-btn {
+        min-width: 76px;
+        padding: 9px 10px;
+        font-size: 0.82rem;
+      }
+      .stop-header {
+        gap: 9px;
+        padding: 14px 12px 12px 14px;
+      }
+      .stop-time {
+        min-width: 40px;
+        font-size: 0.72rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Hero ── -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>廈門之旅 🌊</h1>
+    <div class="hero-sub">2026．05．07 -- 11</div>
+    <div class="hero-meta">
+      <div class="hero-hotel">VISHAN Fashion Designer Trendy Residence</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Tabs ── -->
+<div class="tabs-wrapper">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showDay(0)">
+      Day 1<br><span class="tab-date">05．07 四</span>
+    </button>
+    <button class="tab-btn" onclick="showDay(1)">
+      Day 2<br><span class="tab-date">05．08 五</span>
+    </button>
+    <button class="tab-btn" onclick="showDay(2)">
+      Day 3<br><span class="tab-date">05．09 六</span>
+    </button>
+    <button class="tab-btn" onclick="showDay(3)">
+      Day 4<br><span class="tab-date">05．10 日</span>
+    </button>
+    <button class="tab-btn" onclick="showDay(4)">
+      Day 5<br><span class="tab-date">05．11 一</span>
+    </button>
+  </div>
+</div>
+
+<!-- ── Content ── -->
+<div class="content">
+
+  <!-- Day 1 -->
+  <div class="day-section active" id="day-0">
+    <div class="day-header">
+      <span class="day-title">啟程✈️・松山直飛金門</span>
+    </div>
+
+    <!-- 出發路線 -->
+    <div class="journey-bar">
+      <div class="journey-step">
+        <div class="journey-icon">✈️</div>
+        <div class="journey-info">
+          <span class="journey-label">松山機場</span>
+          <span class="journey-time">08:10</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">🏝️</div>
+        <div class="journey-info">
+          <span class="journey-label">金門</span>
+          <span class="journey-time">09:30</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+    </div>
+
+    <!-- 小三通 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">12:30</div>
+        <div class="stop-icon ic-boat">⛴️</div>
+        <div class="stop-info">
+          <div class="stop-name">小三通・抵廈門</div>
+          <div class="stop-note">由金門搭船渡海到廈門</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 小三通</div>
+            <audio controls src="audio/小三通.mp3"></audio>
+          </div>
+          <div class="stop-desc">
+            <p>大家好，我們現在搭的這班船，走的是「小三通」航線——從金門料羅港出發，橫越台灣海峽最窄的水道，大約30分鐘就能抵達廈門。</p>
+            <p>別看這段路程短短的，它背後有段很特別的歷史。金門和廈門之間的距離只有約9公里，天氣好的時候，站在金門海邊，廈門的高樓大廈肉眼就看得到。但這兩岸之間，曾經有長達半世紀完全不能往來。1949年之後，這片海峽就像一道巨大的牆，把兩岸人民隔開。1958年的「八二三砲戰」，廈門對金門打了47萬發砲彈，金門島幾乎每天都活在砲聲之下。</p>
+            <p>直到2001年，「小三通」才正式開通，讓台灣人可以從金門直接進入廈門。現在每天都有幾十個航班往返，兩岸之間那道看不見的牆，終於慢慢打開了一條縫。我們今天走的這段路，短短30分鐘，承載了幾十年的歷史。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="journey-bar">
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">🏨</div>
+        <div class="journey-info">
+          <span class="journey-label">飯店放行李</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+    </div>
+
+
+    <!-- 八市 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">下午</div>
+        <div class="stop-icon ic-food">🦪</div>
+        <div class="stop-info">
+          <div class="stop-name">八市</div>
+          <div class="stop-note">廈門傳統市場</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 第八市場</div>
+            <audio controls src="audio/第八市場.mp3"></audio>
+          </div>
+          <div class="stop-desc">
+            <p><strong>八市（第八市場）</strong></p>
+            <p>八市的全名是「第八市場」，是廈門最有生活氣息的傳統市場，也是廈門人每天早上買菜的地方。</p>
+            <p>這裡從清朝就有市場，已經有超過百年歷史。走進八市，你會看到各種叫不出名字的新鮮海產——廈門靠海，這裡的漁獲種類之多令人眼花撩亂，有各種貝類、螃蟹、魚、蝦，還有很多台灣不常見的品種。</p>
+            <p>八市最迷人的地方是它的「煙火氣」——就是那種真實的、接地氣的生活感。攤販大聲叫賣、主婦們在討價還價、旁邊的早餐攤飄出沙茶麵的香味……這裡沒有刻意為觀光客設計的表演，就是廈門人最真實的日常生活。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中山路 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">下午</div>
+        <div class="stop-icon ic-food">🍜</div>
+        <div class="stop-info">
+          <div class="stop-name">中山路</div>
+          <div class="stop-note">廈門老字號美食街漫步</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 中山路步行街</div>
+            <audio controls src="audio/中山路.mp3"></audio>
+          </div>
+          <div class="stop-desc">
+            <p>中山路是廈門最老的商業街，也是廈門人最驕傲的一條路。</p>
+            <p>這條路建於1920年代，是廈門最早的現代化街道。最特別的是它的「騎樓」建築——就是把建築物的二樓延伸出來，蓋在人行道上方，讓行人不管下雨還是大太陽都可以在騎樓下行走，這是東南亞和閩南地區非常典型的建築風格，在台灣的一些老街也看得到。</p>
+            <p>中山路上有廈門最老的餅店、最老的中藥行，還有各種閩南小吃。這裡也是廈門最早有電燈、有電話的地方。到了晚上，整條街的燈亮起來，騎樓的輪廓在夜色中特別漂亮。</p>
+            <p>逛中山路，推薦一定要吃的是「沙茶麵」和「廈門燒肉粽」——這兩樣是廈門人的靈魂食物，和台灣的版本有些不同，味道很值得比較看看。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 鷺江夜遊 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">晚上</div>
+        <div class="stop-icon ic-night">🌃</div>
+        <div class="stop-info">
+          <div class="stop-name">鷺江夜遊</div>
+          <div class="stop-note">鷺江夜景</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙 鷺江</div>
+            <audio controls src="audio/鷺江夜遊.mp3"></audio>
+          </div>
+          <div class="stop-desc">
+            <p><strong>鷺江夜遊</strong></p>
+            <p>鷺江，就是廈門島和鼓浪嶼之間那片海峽。「鷺」是白鷺鷥，廈門的別稱就叫「鷺島」，因為以前島上有很多白鷺棲息。</p>
+            <p>夜遊鷺江，坐在船上，左邊是廈門島璀璨的高樓夜景，右邊是鼓浪嶼靜謐的燈火，海風吹來，非常舒服。船上通常會播放南音——南音是閩南地區最古老的音樂，被稱為「中國音樂的活化石」，已經有一千多年歷史，聯合國也認定它是人類非物質文化遺產。</p>
+            <p>坐在船上，聽著古老的南音，看著兩岸的燈火倒映在海面上，這是廈門給旅人最美的一個夜晚記憶。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-section" id="day-1">
+    <div class="day-header">
+      <span class="day-title">集美・閩南文化</span>
+      <span class="day-charter">🚌 包車接送</span>
+    </div>
+
+    <!-- 海上小火車 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time"></div>
+        <div class="stop-icon ic-food">🚂</div>
+        <div class="stop-info">
+          <div class="stop-name">海上小火車</div>
+          <div class="stop-note">體驗廈門獨特的交通方式</div>
+          <div class="audio-badge">🎙 點擊聆聽故事</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-player">
+            <div class="audio-player-title">🎙  海上小火車</div>
+            <audio controls src="audio/海上地鐵.mp3"></audio>
+          </div>          
+          <div class="stop-desc">
+            <p>我們等一下要搭的，是廈門非常特別的「地鐵3號線」，當地人叫它「海上地鐵」。</p>
+            <p>為什麼叫海上地鐵呢？因為這條線有一段路段，是從海底穿越廈門海峽的——也就是說，我們坐在地鐵裡的時候，頭頂上是真實的海水！不過別擔心，隧道建得非常扎實，安全沒問題。</p>
+            <p>更特別的是，從海底穿出來之後，地鐵會爬上一座高架橋，這時候車窗外就是廣闊的海景，能看到廈門港、鼓浪嶼，天氣好的話視野非常漂亮。從地底下到海面上，這種反差讓很多遊客特別驚喜，這也是為什麼這條線被選為「中國最美地鐵線路」之一。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 集美學村・大社 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">08:30</div>
+        <div class="stop-icon ic-sight">🏛️</div>
+        <div class="stop-info">
+          <div class="stop-name">集美學村・大社</div>
+          <div class="stop-note">陳嘉庚創辦的百年校園</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>集美學村，是廈門最重要的文化地標之一，也是一個充滿故事的地方。</p>
+            <p>這裡是愛國華僑陳嘉庚先生一手建立的。陳嘉庚是福建人，年輕時去南洋（也就是東南亞）經商，靠著橡膠和菠蘿罐頭生意，成為當時的大富豪。但他賺到錢之後，沒有只想著自己享受，而是把大部分的財富拿來辦教育——因為他深深相信，要讓中國強大，就必須先讓老百姓受教育。</p>
+            <p>他用自己的錢，在家鄉集美辦了從小學、中學、到大學的一整套學校，還蓋了圖書館、體育館、學生宿舍。最厲害的是，他後來生意遇到困難，破產了，但他還是堅持繼續辦學，甚至變賣家產、借錢也要讓學校繼續運作。他說過一句很有名的話：「死後捐獻所有財產給社會。」</p>
+            <p>現在我們走進集美學村，可以看到那些融合閩南風格和南洋風格的建築，紅磚燕尾脊的屋頂，配上西式的廊柱，非常獨特。這些建築不只是好看，每一棟背後都是陳嘉庚先生用血汗錢蓋起來的。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 嘉庚公園 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time"></div>
+        <div class="stop-icon ic-sight">🌿</div>
+        <div class="stop-info">
+          <div class="stop-name">嘉庚公園</div>
+          <div class="stop-note">緬懷華僑先賢陳嘉庚</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>嘉庚公園就在集美學村旁邊，是為了紀念陳嘉庚先生而建的。公園裡有他的陵墓「鰲園」，墓園的圍牆上雕刻了超過600幅的歷史浮雕，從世界史到中國史都有，據說陳嘉庚親自監督設計，花了十幾年才完成。</p>
+            <p>這裡還有一座「陳嘉庚紀念館」，裡面展示了他一生的故事和珍貴文物。如果你想更了解這位了不起的老人，進去走一走非常值得。</p>
+            <p>旁邊的「大社」是集美的老聚落，陳嘉庚就是在這裡出生長大的。走在老街裡，可以感受到閩南傳統聚落的生活氣息，和學村的書香氣質形成有趣的對比。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 閩南傳奇秀 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">14:30</div>
+        <div class="stop-icon ic-show">🎭</div>
+        <div class="stop-info">
+          <div class="stop-name">閩南傳奇秀</div>
+          <div class="stop-note">大型歷史文化實景演出</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 曾安厝大街・沙波尾 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">傍晚</div>
+        <div class="stop-icon ic-walk">🚶</div>
+        <div class="stop-info">
+          <div class="stop-name">曾安厝大街・沙波尾</div>
+          <div class="stop-note">文青老街散步</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 雙子星 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">晚上</div>
+        <div class="stop-icon ic-night">🌟</div>
+        <div class="stop-info">
+          <div class="stop-name">雙子星大樓夜景</div>
+          <div class="stop-note">登高俯瞰廈門璀璨夜色</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>廈門雙子星是廈門最新的地標建築，兩棟高達300多公尺的摩天大樓，外型像兩個並肩而立的巨人，是廈門的新天際線。</p>
+            <p>站在觀景台上，整個廈門島、鼓浪嶼、廈門大橋盡收眼底，夜景尤其壯觀。白天你看的是集美學村、中山路這些老廈門的故事；晚上站在這裡，看的是廈門的未來。新與舊的對比，是廈門這座城市最有趣的地方。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day-section" id="day-2">
+    <div class="day-header">
+      <span class="day-title">土樓之旅・雲水謠</span>
+      <span class="day-charter">🚌 包車接送</span>
+    </div>
+
+    <!-- 雲水謠 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">07:30</div>
+        <div class="stop-icon ic-sight">🌄</div>
+        <div class="stop-info">
+          <div class="stop-name">雲水謠景區</div>
+          <div class="stop-note">世界遺產・千年古榕</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>土樓是福建山區客家人和閩南人蓋的大型圓形或方形建築，一棟樓裡可以住幾十戶人家，是幾百年前人們為了防盜、防野獸、大家族共同生活而發展出來的獨特建築形式，2008年被列為世界文化遺產。</p>
+            <p>雲水謠是附近的一條古道和溪流，兩岸有幾百年樹齡的大榕樹，樹根盤根錯節，非常壯觀。這裡也是電影《雲水謠》的拍攝地，那是一部關於兩岸情感的愛情電影。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 和貴樓 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time"></div>
+        <div class="stop-icon ic-sight">🏯</div>
+        <div class="stop-info">
+          <div class="stop-name">和貴樓</div>
+          <div class="stop-note">建在沼澤上的神奇土樓</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>和貴樓是土樓裡的一個奇蹟——它蓋在沼澤地上！建造者打了200多根松木樁插進沼澤裡當地基，整棟樓就這樣「漂浮」在軟泥上，蓋好至今已有將近300年，樓還是穩穩的，用筷子插進樓內地面，還會感覺到地面在輕微搖動。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 懷遠樓 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time"></div>
+        <div class="stop-icon ic-sight">🏯</div>
+        <div class="stop-info">
+          <div class="stop-name">懷遠樓</div>
+          <div class="stop-note">精美雕刻・方形土樓</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>懷遠樓以精緻的雕刻和彩繪聞名，內部保存非常完好，被稱為「土樓中的藝術品」。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 午餐 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">12:00</div>
+        <div class="stop-icon ic-food">🥢</div>
+        <div class="stop-info">
+          <div class="stop-name">午餐</div>
+          <div class="stop-note">客家風味料理</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 田螺坑 + 裕昌樓 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">下午</div>
+        <div class="stop-icon ic-sight">📸</div>
+        <div class="stop-info">
+          <div class="stop-name">田螺坑景區・裕昌樓</div>
+          <div class="stop-note">上下景觀台拍照・最古老土樓</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p><strong>田螺坑景區</strong></p>
+            <p>田螺坑土樓群，是所有土樓裡最「上鏡」的一個組合——四個圓樓加一個方樓，分佈在山坡上，從高處俯瞰，像是從天上撒下來的幾枚銅錢，又像是一朵盛開的梅花。</p>
+            <p>這個組合太特別了，2008年北京奧運的主題郵票，用的就是田螺坑土樓群的圖案。有美國衛星第一次拍到這裡的時候，還以為這是中國的秘密核武基地——因為那幾個完美的圓形實在太整齊了！後來美方派人來一看，才發現是幾百年前農民蓋的房子，哭笑不得。</p>
+            <p>上下兩個觀景台各有不同角度，上台看全景、下台感受土樓的壯觀尺度，兩個都值得去。</p>
+            <p><strong>裕昌樓</strong></p>
+            <p>裕昌樓是現存最古老的土樓，建於元朝末年，距今大約有700年歷史！</p>
+            <p>最神奇的地方是它的柱子——整棟樓的柱子和樓梯都是歪的，最大的傾斜角度有15度，看起來隨時要倒塌，但就這樣歪了700年還沒倒。據說是當初建造時工匠技術不夠精準，結果反而歪出了一種奇特的美感，當地人叫它「東歪西倒樓」。</p>
+            <p>站在樓裡往上看，那些傾斜的木頭結構有一種魔幻的視覺效果，非常難忘。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="day-section" id="day-3">
+    <div class="day-header">
+      <span class="day-title">鼓浪嶼・慢遊一整天</span>
+    </div>
+
+    <!-- 前往鼓浪嶼 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">08:30</div>
+        <div class="stop-icon ic-boat">⛴️</div>
+        <div class="stop-info">
+          <div class="stop-name">前往鼓浪嶼</div>
+          <div class="stop-note">世界文化遺產小島・無車天堂</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>鼓浪嶼，是廈門最浪漫的地方，也是中國最特別的小島之一。</p>
+            <p>這個只有1.8平方公里的小島，步行一圈大概兩個小時，島上沒有汽車，只有步行和少數電動車。鼓浪嶼的名字來自島上一塊會發出鼓聲的礁石——每當漲潮，海浪打進礁石縫隙，就會發出「咚咚咚」的聲音，像鑼鼓在響。</p>
+            <p>19世紀末，鼓浪嶼成為各國租界，英國、美國、德國、日本等13個國家先後在這裡設立領事館，帶來了各式各樣的西洋建築。所以今天走在鼓浪嶼，你會看到哥德式教堂、巴洛克式別墅、閩南紅磚老厝混在一起，非常奇特。</p>
+            <p>鼓浪嶼還有一個特別的稱號：「鋼琴之島」。這裡的居民特別愛音樂，據說島上一度每40個人就有一台鋼琴，走在小巷裡，常常可以聽到不知哪戶人家傳出的琴聲。2017年，鼓浪嶼正式被列為世界文化遺產。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 島上漫步 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">全天</div>
+        <div class="stop-icon ic-walk">🌺</div>
+        <div class="stop-info">
+          <div class="stop-name">島上慵懶漫步</div>
+          <div class="stop-note">只能步行・隨意探索老洋樓</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 回廈門 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">19:00</div>
+        <div class="stop-icon ic-boat">⛴️</div>
+        <div class="stop-info">
+          <div class="stop-name">回廈門本島</div>
+          <div class="stop-note">晚上自由活動</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day-section" id="day-4">
+    <div class="day-header">
+      <span class="day-title">南普陀・✈️ 金門飛台</span>
+    </div>
+
+    <!-- 南普陀 -->
+    <div class="stop-card" onclick="toggleCard(this)">
+      <div class="stop-header">
+        <div class="stop-time">08:30</div>
+        <div class="stop-icon ic-sight">🛕</div>
+        <div class="stop-info">
+          <div class="stop-name">南普陀寺</div>
+          <div class="stop-note">千年古剎・祈福靈驗</div>
+          <div class="audio-badge pending">🎙 故事即將上線</div>
+        </div>
+        <div class="stop-arrow">›</div>
+      </div>
+      <div class="stop-panel">
+        <div class="stop-panel-inner">
+          <div class="stop-desc">
+            <p>南普陀寺，是廈門最重要的佛教聖地，也是閩南佛教文化的中心。</p>
+            <p>這座寺廟建於唐朝，距今超過一千年，依山而建，背靠五老峰，面朝大海，風水極佳。「南普陀」這個名字，是因為供奉觀世音菩薩，而觀音菩薩的道場在浙江普陀山，這裡在普陀山之南，所以叫「南普陀」。</p>
+            <p>寺裡香火鼎盛，每天都有大批信徒和遊客前來。這裡有一樣東西全中國聞名——就是南普陀的「素菜」。南普陀寺的素食料理，是中國最有名的素食之一，廚師用豆腐、蔬菜、素材，做出「假雞」「假魚」「假螃蟹」，造型惟妙惟肖、口感細膩，連不吃素的人都讚不絕口。如果有機會，非常推薦在這裡吃一頓素齋。</p>
+          </div>
+          <div class="audio-pending">
+            <div class="audio-pending-icon">🎙</div>
+            <div class="audio-pending-text">景點故事錄音即將上傳</div>
+            <div class="audio-pending-sub">敬請期待，精彩內容準備中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 回程路線 -->
+    <div class="journey-bar">
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">⛴️</div>
+        <div class="journey-info">
+          <span class="journey-label">小三通</span>
+          <span class="journey-time">13:00</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step">
+        <div class="journey-icon">✈️</div>
+        <div class="journey-info">
+          <span class="journey-label">金門起飛</span>
+          <span class="journey-time">16:40</span>
+        </div>
+      </div>
+      <div class="journey-arrow"></div>
+      <div class="journey-step dest">
+        <div class="journey-icon">🏠</div>
+        <div class="journey-info">
+          <span class="journey-label">松山機場</span>
+          <span class="journey-time">17:50</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content -->
+
+<div class="footer">bonnie製作 · 廈門之旅 2026 🌊</div>
+
+<script>
+  function resetCard(card) {
+    card.classList.remove('open');
+    card.querySelectorAll('.stop-desc.open').forEach(desc => desc.classList.remove('open'));
+    card.querySelectorAll('.desc-toggle').forEach(btn => {
+      btn.classList.remove('open');
+      const arrow = btn.querySelector('span');
+      if (arrow) arrow.textContent = '▼';
+    });
+  }
+
+  function showDay(idx) {
+    document.querySelectorAll('.day-section').forEach((s, i) => {
+      s.classList.toggle('active', i === idx);
+    });
+    document.querySelectorAll('.tab-btn').forEach((b, i) => {
+      b.classList.toggle('active', i === idx);
+    });
+    // Close all open cards when switching days
+    document.querySelectorAll('.stop-card.open').forEach(resetCard);
+  }
+
+  function toggleCard(card) {
+    const wasOpen = card.classList.contains('open');
+    // Close siblings
+    card.closest('.day-section').querySelectorAll('.stop-card.open').forEach(resetCard);
+    if (!wasOpen) card.classList.add('open');
+  }
+
+  document.querySelectorAll('.stop-card').forEach(function(card) {
+    card.removeAttribute('onclick');
+    const header = card.querySelector('.stop-header');
+    if (header) {
+      header.setAttribute('role', 'button');
+      header.setAttribute('tabindex', '0');
+      header.addEventListener('click', function() {
+        toggleCard(card);
+      });
+      header.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleCard(card);
+        }
+      });
+    }
+  });
+
+  // 自動為每個景點文字加上「展開介紹」按鈕
+  document.querySelectorAll('.stop-desc').forEach(function(desc) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'desc-toggle';
+    btn.innerHTML = '📖 閱讀景點介紹 &nbsp;<span>▼</span>';
+    btn.onclick = function(e) {
+      e.stopPropagation();
+      var isOpen = desc.classList.contains('open');
+      desc.classList.toggle('open');
+      this.classList.toggle('open', !isOpen);
+      this.querySelector('span').textContent = isOpen ? '▼' : '▲';
+    };
+    desc.parentNode.insertBefore(btn, desc);
+  });
+
+  // ── How to add audio when ready ──────────────────────────────────────────
+  // 1. Put your .mp3 files in the /audio folder, e.g. audio/gulangyu.mp3
+  // 2. Find the card you want (by name) and change the .stop-panel-inner
+  //    from <div class="audio-pending">...</div>
+  //    to:
+  //    <div class="audio-player">
+  //      <div class="audio-player-title">🎙 景點故事</div>
+  //      <audio controls src="audio/gulangyu.mp3"></audio>
+  //    </div>
+  // 3. Also change the .audio-badge class from "pending" to just "audio-badge":
+  //    <div class="audio-badge">🎙 點擊聆聽故事</div>
+  // ─────────────────────────────────────────────────────────────────────────
+</script>
+</body>
+</html>
