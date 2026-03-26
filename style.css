@@ -265,7 +265,8 @@ body {
 
 /* === AUDIO STORY BTN === */
 .btn-audio {
-  display: inline-flex; align-items: center; gap: 0.3rem;
+  display: none !important;
+  align-items: center; gap: 0.3rem;
   padding: 0.35rem 1rem;
   background: var(--ocean-light); border: 1px solid var(--ocean);
   color: var(--dark); cursor: pointer;
