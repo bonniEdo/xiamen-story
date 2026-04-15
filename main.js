@@ -1,9 +1,9 @@
 const days = [
-  {n:1, title:'🛬 Day 1 · 抵廈'},
-  {n:2, title:'🚇 Day 2 · 集美'},
-  {n:3, title:'🏯 Day 3 · 土樓'},
-  {n:4, title:'🌊 Day 4 · 鼓浪嶼'},
-  {n:5, title:'🎭 Day 5 · 返台'},
+  { n: 1, title: '🛬 Day 1 · 抵廈+市區漫遊' },
+  { n: 2, title: '🚇 Day 2 · 集美學村+老院子景區' },
+  { n: 3, title: '🏯 Day 3 · 雲水謠+田螺坑' },
+  { n: 4, title: '🌊 Day 4 · 鼓浪嶼' },
+  { n: 5, title: '✈️ Day 5 · 南普陀寺+廈門大學 > 返台' },
 ];
 const nav = document.getElementById('dayNav');
 days.forEach(d => {
@@ -15,15 +15,56 @@ days.forEach(d => {
     document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
     document.getElementById(`day-${d.n}`).classList.add('active');
     btn.classList.add('active');
-    document.getElementById('mainContent').scrollIntoView({behavior:'smooth', block:'start'});
+    document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
   nav.appendChild(btn);
 });
 
+function initSpotCarousels() {
+  const carousels = Array.from(document.querySelectorAll('[data-carousel]'));
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector('.spot-carousel-track');
+    const slides = Array.from(carousel.querySelectorAll('.spot-img'));
+    const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+    const prevBtn = carousel.querySelector('[data-carousel-prev]');
+    const nextBtn = carousel.querySelector('[data-carousel-next]');
+    if (!track || slides.length <= 1) return;
+
+    let currentIndex = 0;
+    const render = () => {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      slides.forEach((slide, i) => slide.classList.toggle('is-active', i === currentIndex));
+      dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentIndex));
+    };
+
+    prevBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      render();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      render();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        render();
+      });
+    });
+
+    render();
+  });
+}
+
+initSpotCarousels();
+
 function calcBudget() {
-  const ids = ['b1','b2','b3','b4','b5','b6','b7','b8','b9'];
-  const total = ids.reduce((s,id) => s + (parseFloat(document.getElementById(id).value)||0), 0);
-  document.getElementById('totalDisplay').textContent = 'NT$ ' + total.toLocaleString();
+  const inputs = Array.from(document.querySelectorAll('.budget-grid input[type="number"]'));
+  const total = inputs.reduce((sum, input) => sum + (parseFloat(input.value) || 0), 0);
+  const totalDisplay = document.getElementById('totalDisplay');
+  if (totalDisplay) totalDisplay.textContent = 'NT$ ' + total.toLocaleString();
 }
 calcBudget();
 
@@ -117,7 +158,7 @@ async function playSpotStory(btn, spotName, spotHint, audioSrc = null) {
     utter.onend = utter.onerror = () => { btn.textContent = '🎙️ 聽故事'; btn.dataset.state = 'idle'; currentUtterance = null; currentBtn = null; };
     currentUtterance = utter; currentBtn = btn;
     window.speechSynthesis.speak(utter);
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     btn.textContent = '🎙️ 聽故事'; btn.dataset.state = 'idle'; btn.disabled = false;
   }
@@ -125,4 +166,4 @@ async function playSpotStory(btn, spotName, spotHint, audioSrc = null) {
 
 window.speechSynthesis.getVoices();
 window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-if (!window.speechSynthesis) document.querySelectorAll('.btn-audio').forEach(b => b.style.display='none');
+if (!window.speechSynthesis) document.querySelectorAll('.btn-audio').forEach(b => b.style.display = 'none');
