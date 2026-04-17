@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>廈門玩一下 · 五日行程</title>
+  <link rel="stylesheet" href="travel-base.css">
+  <style>
+    /* 廈門主題微調 */
+    :root {
+      --primary: #7a5c44;
+      --primary-light: #f5ece0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&q=80');"></div>
+  <div class="hero-content">
+    <div class="hero-tag">2025 · FUJIAN · CHINA</div>
+    <h1>廈<em>門</em><br>玩一下</h1>
+    <p class="hero-sub">鼓浪嶼 · 土樓 · 海鮮 · 小三通</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">5</span><span class="label">天</span></div>
+      <div class="hero-stat"><span class="num">4</span><span class="label">夜</span></div>
+      <div class="hero-stat"><span class="num">14</span><span class="label">人同行</span></div>
+      <div class="hero-stat"><span class="num">5/07</span><span class="label">出發</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY NAV -->
+<nav class="day-nav" id="dayNav">
+  <div class="day-nav-inner">
+    <button class="day-btn active" onclick="showDay(1,this)">Day 1<span>5/07 四</span></button>
+    <button class="day-btn" onclick="showDay(2,this)">Day 2<span>5/08 五</span></button>
+    <button class="day-btn" onclick="showDay(3,this)">Day 3<span>5/09 六</span></button>
+    <button class="day-btn" onclick="showDay(4,this)">Day 4<span>5/10 日</span></button>
+    <button class="day-btn" onclick="showDay(5,this)">Day 5<span>5/11 一</span></button>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+  <!-- ===== DAY 1 ===== -->
+  <div class="day-content active" id="day-1">
+    <div class="day-header">
+      <div>
+        <div class="day-num">DAY ONE · 05/07 (四)</div>
+        <h2 class="day-theme">抵達廈門，中山路初探</h2>
+      </div>
+      <div class="day-header-deco">一</div>
+    </div>
+
+    <div class="meal-strip">
+      <span class="meal-label">🍽 晚餐</span>
+      <span>朱富貴海鮮（火車站店，手機線上預約）</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=800&q=80" alt="松山機場">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">08:10</div>
+            <h3 class="spot-name">松山飛往廈門</h3>
+            <p class="spot-desc">從台北松山機場出發，包車（14人小巴）接機前往飯店。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=松山機場" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'松山機場','台北市區內的小型機場，飛廈門航程約1小時')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800&q=80" alt="廈門中山路">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">12:30</div>
+            <h3 class="spot-name">廈門中山路</h3>
+            <p class="spot-desc">飯店走路可到的熱鬧大街，逛街覓食，觀光區東西偏貴，秤重注意袋子有水。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門中山路" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門中山路','廈門最繁華的商業步行街，騎樓建築風格，百年老字號與現代小吃並存')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="八市海鮮市場">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">下午</div>
+            <h3 class="spot-name">八市（第八菜市場）</h3>
+            <p class="spot-desc">廈門最有煙火氣的傳統市場，各式生猛海鮮任君挑選，是感受在地生活的好去處。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門八市" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門八市','廈門最有名的海鮮市場，清早漁獲直送，熱鬧又有趣')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80" alt="沙坡尾">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">傍晚</div>
+            <h3 class="spot-name">沙坡尾 & 雙子星</h3>
+            <p class="spot-desc">沙坡尾是第二條熱鬧大街，文藝氣息濃厚。雙子星大廈上去要門票，但可到咖啡廳享受城市景觀。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門沙坡尾" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門沙坡尾','廈門最文青的老漁港改造區，塗鴉牆、咖啡館與漁船並存')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item optional-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card" style="border-style:dashed; opacity:0.8;">
+          <div class="spot-body">
+            <div class="spot-time" style="font-size:0.7rem;">有力氣再去</div>
+            <h3 class="spot-name">植物園 / 鐘鼓索道 / 演武大橋</h3>
+            <p class="spot-desc">植物園 30r，65+免費。鐘鼓索道 80r，70歲以上不能搭。演武大橋景觀優美。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門植物園" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hotel-info">
+      <span class="hotel-icon">🏨</span>
+      <div>
+        <div class="hotel-name">廈門中山路宜度·潮宿</div>
+        <div class="hotel-note">飯店走路可到中山路商圈</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 2 ===== -->
+  <div class="day-content" id="day-2">
+    <div class="day-header">
+      <div>
+        <div class="day-num">DAY TWO · 05/08 (五)</div>
+        <h2 class="day-theme">集美學村 · 閩南傳奇秀</h2>
+      </div>
+      <div class="day-header-deco">二</div>
+    </div>
+
+    <div class="meal-strip">
+      <span class="meal-label">🍽 午餐</span>
+      <span>石鼓路隨便吃吃</span>
+      <span class="meal-sep">·</span>
+      <span class="meal-label">🍽 晚餐</span>
+      <span>后田海鮮 · 曾厝安大街覓食</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80" alt="海上地鐵">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">08:30</div>
+            <h3 class="spot-name">海上地鐵</h3>
+            <p class="spot-desc">搭乘廈門著名的海上地鐵，穿越海底隧道，票價 5r，沿途可欣賞海景。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門地鐵" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門海上地鐵','廈門地鐵跨越海峽連接島內外，被稱為海上地鐵，車廂內有海景窗')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80" alt="集美學村">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">集美學村</h3>
+            <p class="spot-desc">陳嘉庚先生創辦的教育村，中西合璧的建築群令人驚嘆，閩南風格與南洋建築完美融合。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=集美學村" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'集美學村','愛國華僑陳嘉庚傾盡家財興建的學村，閩南紅磚建築與南洋騎樓交織的教育聖地')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="嘉庚公園">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">十里長堤 · 嘉庚公園 · 大社</h3>
+            <p class="spot-desc">十里長堤下午去更漂亮但時間可能不夠。嘉庚公園紀念陳嘉庚先生，大社是傳統閩南聚落。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=嘉庚公園廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'嘉庚公園','為紀念陳嘉庚先生而建的公園，臨海而立，遠眺學村風光')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=800&q=80" alt="閩南傳奇秀">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">14:30</div>
+            <h3 class="spot-name">閩南傳奇秀</h3>
+            <p class="spot-desc">大型實景演出，展現閩南文化精髓，視覺震撼。票價 NT$1,110/人，演出前記得提前到場。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 NT$1,110/人</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=閩南傳奇演藝廳" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'閩南傳奇秀','大型閩南文化主題演出，融合歌仔戲、南音、木偶戲等傳統藝術')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="老院子景區">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">演出後</div>
+            <h3 class="spot-name">老院子景區</h3>
+            <p class="spot-desc">70歲以上免費，60-69歲 80r，60歲以下 129r。傳統閩南建築群落，適合拍照。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 129r / 80r / 免費</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=老院子景區廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'老院子景區','保留完整閩南傳統民居的活態博物館，青磚白牆燕尾脊')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-body">
+            <div class="spot-time">晚上</div>
+            <h3 class="spot-name">鷺江夜遊</h3>
+            <p class="spot-desc">夜晚搭船遊覽鷺江，欣賞廈門夜景與鼓浪嶼燈光，票價 NT$600/人。視天氣可改其他天。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 NT$600/人</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門鷺江夜遊碼頭" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門鷺江夜遊','夜晚的鷺江兩岸燈火璀璨，廈門夜色與鼓浪嶼歐式建築倒映水中')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hotel-info">
+      <span class="hotel-icon">🏨</span>
+      <div>
+        <div class="hotel-name">廈門中山路宜度·潮宿</div>
+        <div class="hotel-note">同一飯店繼續住</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 3 ===== -->
+  <div class="day-content" id="day-3">
+    <div class="day-header">
+      <div>
+        <div class="day-num">DAY THREE · 05/09 (六)</div>
+        <h2 class="day-theme">雲水謠土樓 · 換飯店</h2>
+      </div>
+      <div class="day-header-deco">三</div>
+    </div>
+
+    <div class="meal-strip">
+      <span class="meal-label">🍽 午餐</span>
+      <span>景區內合菜（自費）· 田螺坑景區四菜一湯</span>
+      <span class="meal-sep">·</span>
+      <span class="meal-label">🍽 晚餐</span>
+      <span>客坐嘉廚 / 遇龍閩粵菜 / 五姊妹海鮮（新飯店附近）</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80" alt="包車出發">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">07:30</div>
+            <h3 class="spot-name">包車出發（9人商務車）</h3>
+            <p class="spot-desc">行李先寄放飯店，晚上換飯店。包車到飯店接，記得晚上要拿行李換到新飯店。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=雲水謠景區" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1518512458-d9e3c5b2b0a2?w=800&q=80" alt="雲水謠">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">雲水謠景區</h3>
+            <p class="spot-desc">如詩如畫的古鎮，榕樹古道、溪流石橋與土樓交織，是《雲水謠》電影拍攝地。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=雲水謠景區漳州" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'雲水謠景區','千年古榕、百年土樓、清澈溪流，電影拍攝地，閩南最美的世外桃源')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80" alt="土樓">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午～下午</div>
+            <h3 class="spot-name">和貴樓 · 懷遠樓 · 裕昌樓</h3>
+            <p class="spot-desc">和貴樓是最大的方形土樓；懷遠樓精雕細琢；裕昌樓以歪斜柱子聞名，外號「歪歪斜斜樓」。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=和貴樓土樓" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'福建土樓','世界文化遺產，客家人的集體智慧，圓形與方形的土樓就是一座座小王國')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80" alt="田螺坑">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">下午</div>
+            <h3 class="spot-name">田螺坑景區（四菜一湯）</h3>
+            <p class="spot-desc">從高處俯瞰四圓一方的土樓組合，形似田螺，是土樓最美的拍攝角度。景觀台另外收費。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=田螺坑土樓" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'田螺坑景區','三圓一方加一橢圓的土樓群，從山上俯瞰如同一朵梅花，是所有土樓中最上鏡的')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-body">
+            <div class="spot-time">16:00</div>
+            <h3 class="spot-name">回廈門 · 計程車換新飯店</h3>
+            <p class="spot-desc">記得回來要拿行李！換到鑫安頤豪飯店，晚上在新飯店附近找吃的。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門鑫安頤豪飯店" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hotel-info">
+      <span class="hotel-icon">🏨</span>
+      <div>
+        <div class="hotel-name">廈門鑫安頤豪飯店（換新飯店！）</div>
+        <div class="hotel-note">晚上計程車回來，記得拿行李</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 4 ===== -->
+  <div class="day-content" id="day-4">
+    <div class="day-header">
+      <div>
+        <div class="day-num">DAY FOUR · 05/10 (日)</div>
+        <h2 class="day-theme">鼓浪嶼全島漫遊</h2>
+      </div>
+      <div class="day-header-deco">四</div>
+    </div>
+
+    <div class="meal-strip">
+      <span class="meal-label">🍽 午餐</span>
+      <span>龍頭路小吃（自理）</span>
+      <span class="meal-sep">·</span>
+      <span class="meal-label">🍽 晚餐</span>
+      <span>薑母鴨、煎蟹 @ 鑫塢堂或其他</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">東渡碼頭搭船往鼓浪嶼</h3>
+            <p class="spot-desc">提早手機訂票 35r，需要台胞證資料。特殊旅客可預約通道，航行時間約 30 分鐘。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 35r / 提早訂</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=東渡碼頭廈門" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1569515188263-01b5c8b11aad?w=800&q=80" alt="鼓浪嶼">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">三丘田碼頭 · 龍頭路</h3>
+            <p class="spot-desc">抵達鼓浪嶼後先逛龍頭路，各式小吃攤位，是鼓浪嶼最熱鬧的商業街。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼龍頭路" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'鼓浪嶼龍頭路','鼓浪嶼的商業主街，沙茶麵、南瓜餅、貓咪店，人潮洶湧但充滿活力')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80" alt="管風琴藝術中心">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">管風琴藝術中心</h3>
+            <p class="spot-desc">收藏世界各地珍貴管風琴，票價 25r，65歲以上免費。鼓浪嶼文旅中心微信買票，套票 90r/45r。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 25r / 65+ 免費</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼管風琴藝術中心" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'鼓浪嶼管風琴藝術中心','鼓浪嶼素有鋼琴島之稱，這座藝術中心收藏著讓人屏息的古董管風琴')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1546074177-ffdda98d214f?w=800&q=80" alt="菽庄花園">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">下午</div>
+            <h3 class="spot-name">皓月園 · 菽庄花園</h3>
+            <p class="spot-desc">皓月園供奉鄭成功，票價 10r，65歲以上免費。菽庄花園藏海為池，巧奪天工，30r，65+免費。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 10r + 30r / 65+ 免費</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼菽庄花園" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'菽庄花園','台灣富商林爾嘉思念台灣板橋而建，借海藏池，假山石橋精妙絕倫')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="日光岩">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">下午</div>
+            <h3 class="spot-name">日光岩 · 最美轉角</h3>
+            <p class="spot-desc">日光岩是鼓浪嶼最高點，50r，65+免費，登頂可360度俯瞰全島與廈門。最美轉角是著名的IG打卡點。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">💰 50r / 65+ 免費</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼日光岩" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'日光岩','鼓浪嶼制高點，鄭成功曾在此操練水師，如今是眺望廈門海峽的最佳位置')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-body">
+            <div class="spot-time">17:40前</div>
+            <h3 class="spot-name">內厝奧碼頭回島</h3>
+            <p class="spot-desc">⚠️ 注意：17:40前要搭船到東渡碼頭；17:40後沒有船。18:00回才可以回到中山路（航行約5分鐘）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=內厝澳碼頭鼓浪嶼" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hotel-info">
+      <span class="hotel-icon">🏨</span>
+      <div>
+        <div class="hotel-name">廈門鑫安頤豪飯店</div>
+        <div class="hotel-note">走一天應該很累，晚上自由活動</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DAY 5 ===== -->
+  <div class="day-content" id="day-5">
+    <div class="day-header">
+      <div>
+        <div class="day-num">DAY FIVE · 05/11 (一)</div>
+        <h2 class="day-theme">南普陀 · 廈門大學 · 返台</h2>
+      </div>
+      <div class="day-header-deco">五</div>
+    </div>
+
+    <div class="meal-strip">
+      <span class="meal-label">🍽 午餐</span>
+      <span>午餐自理（12:00搭船返程）</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80" alt="南普陀寺">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">08:30</div>
+            <h3 class="spot-name">南普陀寺</h3>
+            <p class="spot-desc">廈門最著名的佛寺，提早7天手機預約免費入場，可以吃裡面的素齋（據說很好吃！）。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">📱 提早7天手機預約</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=南普陀寺廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'南普陀寺','依山傍海的千年名剎，素齋遠近馳名，寺後五老峰可登高遠眺廈門全景')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80" alt="廈門大學">
+          </div>
+          <div class="spot-body">
+            <div class="spot-time">上午</div>
+            <h3 class="spot-name">廈門大學</h3>
+            <p class="spot-desc">中國最美大學之一，面朝大海，前三天手機預約入場，紅磚白石的閩南建築群令人嘆為觀止。</p>
+            <div class="spot-tag-wrap"><span class="spot-type-badge">📱 前三天手機預約</span></div>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門大學" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this,'廈門大學','陳嘉庚創辦，面朝大海、春暖花開，被評為中國最美麗的大學之一')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-body">
+            <div class="spot-time">12:00</div>
+            <h3 class="spot-name">搭船 · 踏上歸途</h3>
+            <p class="spot-desc">包車（14人小巴）送機，16:40起飛，17:50抵達台北機場。再見，廈門！</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門高崎國際機場" target="_blank">📍 地圖</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hotel-info" style="background:var(--yellow-light); border-color:var(--yellow);">
+      <span class="hotel-icon">✈️</span>
+      <div>
+        <div class="hotel-name">16:40 起飛 → 17:50 台北</div>
+        <div class="hotel-note">廈門，下次再見！</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BUDGET ===== -->
+  <section class="budget-section">
+    <h2 class="section-title">預算概覽</h2>
+    <div class="budget-grid">
+      <div class="budget-item">
+        <label class="budget-label">✈️ 機票（/人）</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b1" value="4800" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🚢 小三通（/人）</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b2" value="1400" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🚐 包車費用（/人）</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b3" value="1625" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🏨 飯店（4晚，/人）</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b4" value="7600" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🎭 閩南傳奇秀</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b5" value="1110" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🚢 鷺江夜遊</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b6" value="600" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🏯 鼓浪嶼船票</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b7" value="250" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-item">
+        <label class="budget-label">🍜 餐食（5天估算）</label>
+        <div class="budget-input-wrap"><span class="budget-currency">NT$</span><input type="number" id="b8" value="3000" oninput="calcBudget()"></div>
+      </div>
+    </div>
+    <div class="budget-total-wrap">
+      <span class="budget-total-label">每人預估總費用</span>
+      <div class="budget-total" id="totalDisplay">NT$ 20,385</div>
+    </div>
+  </section>
+
+  <!-- ===== TIPS ===== -->
+  <section class="tips-section">
+    <h2 class="section-title">廈門旅遊小提示</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">📱</div>
+        <div class="tip-content">
+          <h4>提前預約景點</h4>
+          <p>南普陀寺（提前7天）、廈門大學（提前3天）、鼓浪嶼船票都需要手機提前預約，建議抵達廈門當天就把剩餘行程全部預約好。</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">💰</div>
+        <div class="tip-content">
+          <h4>人民幣換匯與消費</h4>
+          <p>觀光區東西普遍偏貴，建議到在地市場覓食。買海鮮秤重時注意袋子裡有無加水，許多商家會動手腳。建議多備人民幣現金。</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🚢</div>
+        <div class="tip-content">
+          <h4>鼓浪嶼船班時間</h4>
+          <p>從鼓浪嶼回廈門，17:40是最後一班往東渡碼頭的船，千萬不要錯過！晚於這個時間就回不了中山路一帶了。</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🌤</div>
+        <div class="tip-content">
+          <h4>鷺江夜遊視天氣</h4>
+          <p>鷺江夜遊安排在五月，如天氣不佳可彈性調整到另一天。廈門五月氣候多變，建議備雨具和防曬乳。</p>
+        </div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">🎫</div>
+        <div class="tip-content">
+          <h4>長輩票優惠</h4>
+          <p>許多景點有 65 歲以上長輩免費或半價優惠，如日光岩、菽庄花園、皓月園、管風琴藝術中心等，記得攜帶證件核對。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>廈門玩一下 · 2025年5月 · 14人同行</p>
+  <p style="margin-top:0.3rem; font-size:0.7rem; opacity:0.6;">行程資料僅供參考，景點票價及開放時間以當地公告為準</p>
+</footer>
+
+<script>
+// Day 切換
+function showDay(n, btn) {
+  document.querySelectorAll('.day-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('day-' + n).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: document.getElementById('dayNav').offsetTop - 10, behavior: 'smooth' });
+}
+
+// 預算計算
+function calcBudget() {
+  const ids = ['b1','b2','b3','b4','b5','b6','b7','b8'];
+  const total = ids.reduce((s, id) => {
+    const v = parseFloat(document.getElementById(id).value) || 0;
+    return s + v;
+  }, 0);
+  document.getElementById('totalDisplay').textContent = 'NT$ ' + total.toLocaleString();
+}
+calcBudget();
+
+// 語音導覽
+let currentUtterance = null;
+let currentBtn = null;
+
+async function playSpotStory(btn, spotName, spotHint) {
+  if (currentUtterance && currentBtn && currentBtn !== btn) {
+    window.speechSynthesis.cancel();
+    currentBtn.textContent = '🎙️ 聽故事';
+    currentBtn.dataset.state = 'idle';
+  }
+  if (btn.dataset.state === 'playing') {
+    window.speechSynthesis.pause();
+    btn.textContent = '▶️ 繼續';
+    btn.dataset.state = 'paused';
+    return;
+  }
+  if (btn.dataset.state === 'paused') {
+    window.speechSynthesis.resume();
+    btn.textContent = '⏸ 暫停';
+    btn.dataset.state = 'playing';
+    return;
+  }
+  btn.textContent = '⏳ 生成中...';
+  btn.dataset.state = 'loading';
+  btn.disabled = true;
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: '你是一位溫暖風趣的旅遊導覽員。用繁體中文說一段關於景點的小故事，120-160字，口語化、有畫面感，結尾用一句有趣的話收尾。只輸出故事本身，不要任何前言或格式。',
+        messages: [{ role: 'user', content: `景點：${spotName}\n背景提示：${spotHint}\n請說一段適合語音朗讀的導覽小故事。` }]
+      })
+    });
+    const data = await response.json();
+    const story = data.content?.[0]?.text || `歡迎來到${spotName}！`;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(story);
+    utterance.lang = 'zh-TW';
+    utterance.rate = 0.9;
+    const voices = window.speechSynthesis.getVoices();
+    const zhVoice = voices.find(v => v.lang.includes('TW')) || voices.find(v => v.lang.startsWith('zh'));
+    if (zhVoice) utterance.voice = zhVoice;
+    utterance.onstart = () => { btn.textContent = '⏸ 暫停'; btn.dataset.state = 'playing'; btn.disabled = false; };
+    utterance.onend = utterance.onerror = () => { btn.textContent = '🎙️ 聽故事'; btn.dataset.state = 'idle'; currentUtterance = null; currentBtn = null; };
+    currentUtterance = utterance;
+    currentBtn = btn;
+    window.speechSynthesis.speak(utterance);
+  } catch(err) {
+    btn.textContent = '🎙️ 聽故事';
+    btn.dataset.state = 'idle';
+    btn.disabled = false;
+  }
+}
+window.speechSynthesis.getVoices();
+window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+if (!window.speechSynthesis) document.querySelectorAll('.btn-audio').forEach(b => b.style.display='none');
+</script>
+</body>
+</html>

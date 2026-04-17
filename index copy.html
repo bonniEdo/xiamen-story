@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>廈門之旅 ✈️</title>
+  <meta property="og:title" content="🌊2026年05/07 – 05/11 " />
+  <meta property="og:description" content="探索廈門的美麗風景和豐富文化" />
+  <meta property="og:type" content="website" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+TC:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">旅遊行程計劃 · 2026</div>
+    <h1>廈<em>門</em></h1>
+    <p class="hero-sub">廈門 · 福建 &nbsp;|&nbsp; 05/07 – 05/11 </p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">5</div><div class="lbl">天數</div></div>
+      <div class="hero-stat"><div class="num">4</div><div class="lbl">夜</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v18M1 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </div>
+</section>
+
+<!-- DAY NAV -->
+<nav class="day-nav" id="dayNav"></nav>
+
+<div class="container" id="mainContent">
+
+  <!-- DAY 1 -->
+  <div class="day-content active" id="day-1">
+    <div class="day-header">
+      <div class="day-header-left">
+        <div class="day-num">Day 01 · 05/07（四）</div>
+        <h2 class="day-theme">小三通抵廈 · 老城散策 · 海濱夕陽</h2>
+        <p class="day-date">松山 → 金門 → 廈門 · 中山路八市 · 南普陀與環島路</p>
+      </div>
+      <div class="day-header-deco">一</div>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">住宿</span>
+      <span class="meal-item">🏨 Xiamen Xinan Yihao Hotel（全程）</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">用餐</span>
+      <span class="meal-item">⛅ 早餐：在家吃or機場吃</span>
+      <span class="meal-item">☀️ 午餐：朱富貴海鮮餐廳（視抵達時間彈性安排）</span>
+      <span class="meal-item">🌙 晚餐：中山路夜市小吃</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">交通</span>
+      <span class="meal-item">到廈門後 🚗 包車前往各處</span>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/松山機場.jpg" alt="松山機場">
+            <span class="spot-type-badge">交通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">08:10</span><span class="spot-duration">✈️ 出發</span></div>
+            <h3 class="spot-name">松山機場出發</h3>
+            <p class="spot-desc">台北松山機場起飛，前往金門國際機場。飛行時間約1.5小時，記得提前2小時到機場辦理手續，準備好台胞證。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=松山機場" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">台胞證必備</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/小三通圖.jpg" alt="金門水頭碼頭渡輪">
+            <span class="spot-type-badge">小三通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">11:30</span><span class="spot-duration">⛴️ 約0.5小時</span></div>
+            <h3 class="spot-name">金門水頭碼頭 → 廈門五通碼頭</h3>
+            <p class="spot-desc">從金門水頭碼頭搭乘小三通渡輪前往廈門五通碼頭，航程約1小時。請提前準備好台胞證辦理出入境，建議提早30分鐘到碼頭候船。過海峽時可在船頭欣賞金廈兩岸風光。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=金門水頭碼頭" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '金門小三通渡輪', '金門水頭碼頭搭渡輪橫渡台灣海峽前往廈門，是充滿歷史感的兩岸交流航線', './audio/小三通.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">台胞證必備</span><span class="tag">提早30分到碼頭</span><span class="tag">$1400/一般票</span><span class="tag">$700/長者票</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/飯店.jpg" alt="廈門飯店">
+            <span class="spot-type-badge">住宿</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">12:30</span><span class="spot-duration">⏱ 入住</span></div>
+            <h3 class="spot-name">專車接送 · 入住飯店</h3>
+            <p class="spot-desc">港口專車接機，直送市區５星酒店。放好行李、稍作休息，準備出發探索廈門老城區。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://hotel.eztravel.com.tw/detail-xiamen-25-81201197/xiamen-xinan-yihao-hotel-xiamen-railway-station-mixc-store/" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">5星酒店✨</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/中山路.jpg" alt="中山路">
+            <span class="spot-type-badge">老街</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">13:30</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">中山路步行街</h3>
+            <p class="spot-desc">廈門最著名的百年騎樓老街，延伸1公里，閩南風格建築林立。品嚐沙茶麵、海蠣煎、花生湯等在地小吃，是感受廈門市井生活的絕佳起點。免費入場，開放式街區。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=中山路步行街+廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '中山路步行街', '廈門百年騎樓老街，閩南美食與南洋建築的交會', './audio/中山路.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">美食必吃</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/八市.jpg" alt="八市">
+            <span class="spot-type-badge">傳統市場</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">15:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">第八市場（八市）海鮮市場</h3>
+            <p class="spot-desc">廈門最古老的傳統海鮮市場，海鮮種類豐富、價格公道。蝦蛄、沙蟲、花蛤應有盡有，可以現買現煮，是感受廈門漁港文化的好去處。免費入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=第八市場+廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '第八市場（八市）', '廈門最古老海鮮市場，蝦蛄沙蟲應有盡有', './audio/第八市場.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">海鮮市場</span><span class="tag">道地體驗</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/南普陀寺.jpg" alt="南普陀寺">
+            <span class="spot-type-badge">寺廟</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">16:00</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">南普陀寺</h3>
+            <p class="spot-desc">閩南著名佛教寺廟，始建於唐末，依五老峰山麓而建。寺內香火鼎盛，素食餐廳享譽遠近，登後山可俯瞰廈門大學校園。免費入場，需提前在公眾號「南普陀寺」預約入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=南普陀寺+廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '南普陀寺', '閩南著名唐代佛寺，依五老峰山麓而建，香火千年不絕')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">需提前預約</span><span class="tag">搜索公眾號「南普陀寺」</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/廈門.jpg" alt="廈門大學">
+            <span class="spot-type-badge">校園</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">17:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">廈門大學 / 芙蓉園區</h3>
+            <p class="spot-desc">中國最美麗的大學之一，依山傍海的絕美校園。建有嘉庚風格建築群，綠樹成蔭，白鷺翱翔。與南普陀寺相鄰，步行即可抵達。校園免費開放參觀（開放式園區）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門大學+廈門" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">開放式校園</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/曾厝垵.jpg" alt="濱海大道夕陽">
+            <span class="spot-type-badge">夕陽景觀</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">18:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">濱海大道夕陽觀景平台</h3>
+            <p class="spot-desc">沿廈門環島路濱海大道散步，欣賞絕美落日。面向台灣海峽，夕陽染紅海面，遠眺鼓浪嶼輪廓，是廈門最美的免費夕陽打卡點。開放式平台，無需購票。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門環島路濱海大道" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">夕陽必看</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/中山路.jpg" alt="中山路夜景">
+            <span class="spot-type-badge">夜景</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">19:30</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">中山路夜景 · 晚餐小吃</h3>
+            <p class="spot-desc">入夜後的中山路華燈初上，騎樓建築在燈光映照下更顯迷人。沿街品嚐各式廈門小吃，沙茶麵、薑母鴨、燒肉粽一次滿足。開放式街區，免費入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=中山路步行街+廈門" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">夜市美食</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-content" id="day-4">
+    <div class="day-header">
+      <div class="day-header-left">
+        <div class="day-num">Day 04 · 05/10（日）</div>
+        <h2 class="day-theme">鼓浪嶼經典巡遊 · 日光岩 · 洋樓博物館</h2>
+        <p class="day-date">搭船上島 · 花園古蹟與小食街 · 傍晚回程</p>
+      </div>
+      <div class="day-header-deco">四</div>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">用餐</span>
+      <span class="meal-item">⛅ 早餐：飯店早餐</span>
+      <span class="meal-item">☀️ 午餐：龍頭路小食街（嚐小食，避開海鮮正餐）</span>
+      <span class="meal-item">🌙 晚餐：回中山路吃晚餐</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">交通</span>
+      <span class="meal-item">⛴️ 渡船往返 35元（提前3-5天買票），島上全程步行</span>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/鼓浪嶼船.jpg" alt="鼓浪嶼渡輪">
+            <span class="spot-type-badge">渡輪</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">08:30</span><span class="spot-duration">⏱ 10分鐘</span></div>
+            <h3 class="spot-name">搭船前往鼓浪嶼</h3>
+            <p class="spot-desc">從廈門輪渡碼頭搭船，約10分鐘抵達鼓浪嶼。建議早出發避開人潮。船票35元往返（65歲以上無優惠，同樣收費），建議提前3-5天在公眾號購票，避免現場排隊。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門輪渡碼頭" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼渡輪', '從廈門輪渡碼頭出發，十分鐘渡海抵達這座無車小島')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">35元往返</span><span class="tag">提前3-5天買票</span><span class="tag">到碼頭公眾號預約</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/日光岩上.jpg" alt="鼓浪嶼日光岩">
+            <span class="spot-type-badge">景點</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">09:00</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">日光岩 — 鼓浪嶼制高點</h3>
+            <p class="spot-desc">鼓浪嶼最高點（海拔92.68m），登頂可360度俯瞰整座小島、廈門市區及台灣海峽。鄭成功曾在此屯兵，岩壁上「天風海濤」四字石刻令人印象深刻。票價50元，65歲以上免費（刷身份證入園）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=日光岩+鼓浪嶼" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '日光岩 — 鼓浪嶼制高點', '海拔九十三公尺的鼓浪嶼最高點，鄭成功屯兵之地')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">50元（65+免費）</span><span class="tag">刷身份證入園</span><span class="tag">制高點</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/老洋房.jpg" alt="菽莊花園">
+            <span class="spot-type-badge">園林</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">10:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">菽莊花園</h3>
+            <p class="spot-desc">建於1913年，依山臨海的私人花園，以藏海、借景手法聞名。園內有四十四橋、十二洞天等景觀，海水引入園中，波光粼粼，是鼓浪嶼最精緻的庭院。票價30元，65歲以上免費（刷身份證入園）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=菽莊花園+鼓浪嶼" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">30元（65+免費）</span><span class="tag">刷身份證入園</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/鼓浪嶼午餐.jpg" alt="龍頭路小食">
+            <span class="spot-type-badge">美食</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">11:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">龍頭路小食街 · 午餐</h3>
+            <p class="spot-desc">鼓浪嶼最熱鬧的美食街，沿途布滿特色小店。推薦品嚐花生湯、黃勝記豬腿肉、龍頭路餡餅。費用自由，建議嘗各式小食，避開海鮮正餐（價格偏高且品質參差）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=龍頭路+鼓浪嶼" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼龍頭路', '龍頭路花生湯、黃勝記豬腿肉，鼓浪嶼必吃道地小食')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">費用自由</span><span class="tag">花生湯必喝</span><span class="tag">現場排隊</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/老洋房.jpg" alt="皓月園">
+            <span class="spot-type-badge">景點</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">13:00</span><span class="spot-duration">⏱ 45分鐘</span></div>
+            <h3 class="spot-name">皓月園 · 鄭成功雕像</h3>
+            <p class="spot-desc">以民族英雄鄭成功為主題的紀念公園，園內有高達15.7公尺的鄭成功石雕立像，面朝台灣海峽，壯觀威武。可眺望廈門市區，是拍照打卡的熱門景點。票價10元，65歲以上免費。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=皓月園+鼓浪嶼" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">10元（65+免費）</span><span class="tag">刷身份證入園</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/老洋房.jpg" alt="鋼琴博物館">
+            <span class="spot-type-badge">博物館</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">14:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">鼓浪嶼鋼琴博物館</h3>
+            <p class="spot-desc">收藏世界各地珍貴鋼琴的專題博物館，館內有數十架百年名琴，訴說鼓浪嶼「鋼琴之島」的音樂傳奇。票價15元，65歲以上免費（刷身份證入園）。鼓浪嶼鋼琴密度居全球之冠。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼鋼琴博物館" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">15元（65+免費）</span><span class="tag">刷身份證入園</span><span class="tag">音樂文化</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/老洋房.jpg" alt="故宮外國文物館">
+            <span class="spot-type-badge">博物館</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">15:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">故宮海上絲綢之路館（外國文物館）</h3>
+            <p class="spot-desc">故宮博物院在鼓浪嶼設立的分館，展示海上絲路時代收藏的珍貴外國文物。票價25元，65歲以上免費但需至售票處換票（刷身份證換免費票後入場）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=故宮鼓浪嶼外國文物館" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">25元（65+免費需換票）</span><span class="tag">至售票處換票</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/鼓浪嶼船.jpg" alt="回程渡輪">
+            <span class="spot-type-badge">交通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">17:00</span><span class="spot-duration">⏱ 回程</span></div>
+            <h3 class="spot-name">搭船回廈門</h3>
+            <p class="spot-desc">傍晚搭渡輪返回廈門，夕陽餘暉下的鼓浪嶼輪廓格外迷人。回程可在輪渡碼頭附近的中山路吃晚餐，為這充實的一天畫上完美句點。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鼓浪嶼碼頭" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '搭船回廈門', '夕陽餘暉中搭渡輪離島，回望鼓浪嶼輪廓的最後一眼')" data-state="idle">🎙️ 聽故事</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-content" id="day-2">
+    <div class="day-header">
+      <div class="day-header-left">
+        <div class="day-num">Day 02 · 05/08（五）</div>
+        <h2 class="day-theme">海上地鐵 · 集美人文 · 後灣海鮮散步</h2>
+        <p class="day-date">穿越海底到集美 · 學村與鰲園 · 午後海鮮收尾</p>
+      </div>
+      <div class="day-header-deco">二</div>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">用餐</span>
+      <span class="meal-item">⛅ 早餐：飯店早餐</span>
+      <span class="meal-item">☀️ 午餐：廈門後灣海鮮大排擋（14:00前到場）</span>
+      <span class="meal-item">🌙 晚餐：返廈門後自由覓食</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">交通</span>
+      <span class="meal-item">🚇 地鐵1號線（2-8元，65+免費）· 🚗 回程打車35分鐘（約40-50元）</span>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/海上列車.jpg" alt="海上地鐵">
+            <span class="spot-type-badge">特色交通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">08:30</span><span class="spot-duration">⏱ 40分鐘</span></div>
+            <h3 class="spot-name">廈門地鐵 1 號線 — 海上地鐵</h3>
+            <p class="spot-desc">全球少見的「海底地鐵」，穿越海底隧道連接廈門島與集美。坐窗邊座位感受在海底穿行的奇特體驗。票價2-8元（依距離），65歲以上持身份證免費搭乘。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門地鐵1號線" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '廈門地鐵1號線 — 海上地鐵', '全球少見的海底地鐵，穿越海底隧道的奇特體驗', './audio/海上地鐵.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">2-8元（65+免費）</span><span class="tag">刷身份證或購票</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/集美學村.jpg" alt="集美學村">
+            <span class="spot-type-badge">人文景點</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">09:30</span><span class="spot-duration">⏱ 2小時</span></div>
+            <h3 class="spot-name">集美學村 · 龍舟池</h3>
+            <p class="spot-desc">陳嘉庚先生創辦的著名學村，融合閩南紅磚建築與西洋風格，「穿西裝、戴斗笠」是其最大特色。龍舟池波光粼粼，岸邊建築倒映水中，美不勝收。開放式學村，免費入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=集美學村+廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '集美學村 · 龍舟池', '陳嘉庚先生創辦，穿西裝戴斗笠的中西合璧建築')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">開放式學村</span><span class="tag">文化景點</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/集美學村.jpg" alt="鰲園公園">
+            <span class="spot-type-badge">公園</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">11:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">鰲園公園 · 牌坊</h3>
+            <p class="spot-desc">由愛國華僑陳嘉庚興建，園內有宏偉牌坊和精美石雕。鰲園以「海中鰲」為構想，四周環海，園內有陳嘉庚陵墓，是集美最重要的人文地標。開放式園區，免費入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=鰲園+集美+廈門" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">開放式園區</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/八市.jpg" alt="後灣海鮮大排擋">
+            <span class="spot-type-badge">美食</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">13:30</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">廈門後灣海鮮大排擋（午餐）</h3>
+            <p class="spot-desc">廈門最知名的平價海鮮大排擋，新鮮海產種類豐富，螃蟹、蝦、蛤蜊任你選。人均消費約100-150元，建議14:00前到場，否則人潮排隊等待時間較長。現場排隊候位。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門後灣海鮮大排擋" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">約100-150元/人</span><span class="tag">現場排隊</span><span class="tag">14:00前到場</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/曾厝垵.jpg" alt="後灣步行街">
+            <span class="spot-type-badge">街區</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">15:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">後灣步行街 · 餐後散步</h3>
+            <p class="spot-desc">海鮮大排擋旁的特色步行街，餐後散步消食的好去處。沿街小店、紀念品攤位林立，海風習習，可感受閩南沿海市鎮的生活氣息。免費漫逛。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門後灣步行街" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">餐後散步</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/廈門.jpg" alt="回廈門">
+            <span class="spot-type-badge">交通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">16:30</span><span class="spot-duration">⏱ 約35分鐘</span></div>
+            <h3 class="spot-name">打車返回廈門市區</h3>
+            <p class="spot-desc">搭乘滴滴/高德打車返回廈門市區，車程約35分鐘，費用約40-50元/輛。回飯店休息，晚上可自由安排探索附近街區。</p>
+            <div class="spot-footer">
+              <div class="spot-tags"><span class="tag">約40-50元/輛</span><span class="tag">滴滴/高德</span><span class="tag">約35分鐘</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-content" id="day-3">
+    <div class="day-header">
+      <div class="day-header-left">
+        <div class="day-num">Day 03 · 05/09（六）</div>
+        <h2 class="day-theme">南靖土樓一日遊 · 雲水謠 · 四菜一湯</h2>
+        <p class="day-date">跟團出發 · 雲水謠古道與土樓群 · 傍晚返回廈門</p>
+      </div>
+      <div class="day-header-deco">三</div>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">用餐</span>
+      <span class="meal-item">⛅ 早餐：飯店早餐</span>
+      <span class="meal-item">☀️ 午餐：景區內客家料理</span>
+      <span class="meal-item">🌙 晚餐：返廈門後餐廳</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">交通</span>
+      <span class="meal-item">🚌 建議報名旅遊團（約200-300元/人，含來回交通）</span>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/雲水謠.jpg" alt="雲水謠">
+            <span class="spot-type-badge">世界遺產</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">07:30</span><span class="spot-duration">⏱ 3小時</span></div>
+            <h3 class="spot-name">雲水謠景區</h3>
+            <p class="spot-desc">古稱「長教」，因電影《雲水謠》而聞名。千年古榕樹群遮天蔽日，古道、水車、土樓構成如畫風景。和貴樓建在沼澤上、懷遠樓精緻雕工，令人嘆為觀止。景區門票約90元，65歲以上免費（建議跟旅遊團，導遊費另計）。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=雲水謠景區+南靖" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '雲水謠景區', '千年古榕、水車、土樓交織的閩南畫卷，電影取景地')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">約90元（65+免費）</span><span class="tag">建議跟旅遊團</span><span class="tag">200-300元/人含交通</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/和貴樓.jpg" alt="和貴樓">
+            <span class="spot-type-badge">土樓</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">09:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">和貴樓</h3>
+            <p class="spot-desc">建在沼澤地上的方形土樓，地基插入無數松木樁，歷經300年依然屹立不倒，被稱為「最神奇的土樓」。院內的水井清澈見底，兩口井相距咫尺卻一淡一鹹。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=和貴樓+南靖" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '和貴樓', '建在沼澤上的方形土樓，三百年屹立不倒的建築奇蹟')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">300年歷史</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/懷遠樓.jpg" alt="懷遠樓">
+            <span class="spot-type-badge">土樓</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">10:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">懷遠樓</h3>
+            <p class="spot-desc">懷遠樓建於清末（1905–1909），是雲水謠一帶最具代表性的雙環圓形土樓之一。外觀樸實厚重、內部工藝細膩，最值得看的是內院核心的祖堂「斯是室」，雕樑畫棟、書卷氣十足。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=懷遠樓+南靖" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '懷遠樓', '清末雙環圓形土樓，內院祖堂斯是室最具人文特色')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">雙環圓樓</span><span class="tag">斯是室</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img spot-img--tianluokeng" src="./pic/四菜一湯.jpg" alt="田螺坑景區">
+            <span class="spot-type-badge">土樓群</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">12:00</span><span class="spot-duration">⏱ 2小時</span></div>
+            <h3 class="spot-name">田螺坑景區 — 四菜一湯</h3>
+            <p class="spot-desc">由四座圓樓與一座方樓組合而成，從山上俯瞰形似「四菜一湯」，是福建土樓最具代表性的景觀，登景觀台拍照是遊客必做的事，建議從上下兩個景觀台各拍一次。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=田螺坑土樓+南靖" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '田螺坑土樓群', '四圓一方的土樓群，從山頂俯瞰如同一道農家菜餚')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">最美土樓群</span><span class="tag">高低角度各拍</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/裕昌樓.jpg" alt="裕昌樓">
+            <span class="spot-type-badge">土樓</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">14:30</span><span class="spot-duration">⏱ 40分鐘</span></div>
+            <h3 class="spot-name">裕昌樓 — 東倒西歪樓</h3>
+            <p class="spot-desc">建於元代，距今約700年，是現存最古老的土樓之一。最大特色是柱子全部向右傾斜，但歷經百年風雨依然穩固，被稱為「東倒西歪樓」，展現古代建築的神奇智慧。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=裕昌樓+南靖" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '裕昌樓 — 東倒西歪樓', '七百年歷史的元代土樓，柱柱傾斜卻屹立不倒的奇景')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">700年歷史</span><span class="tag">最古老土樓</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/廈門.jpg" alt="回廈門">
+            <span class="spot-type-badge">交通</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">16:00</span><span class="spot-duration">⏱ 返回廈門</span></div>
+            <h3 class="spot-name">跟團回程廈門 · 晚上自由活動</h3>
+            <p class="spot-desc">跟隨旅遊團返回廈門市區，車程約2小時（交通含在導遊費中）。回飯店休息後，可自由探索附近夜市或前往環島路海濱走走，欣賞廈門灣夜景。</p>
+            <div class="spot-footer">
+              <div class="spot-tags"><span class="tag">含在導遊費中</span><span class="tag">自由活動</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-content" id="day-5">
+    <div class="day-header">
+      <div class="day-header-left">
+        <div class="day-num">Day 05 · 05/11（一）</div>
+        <h2 class="day-theme">環島路晨景 · 曾厝垵散步 · 小三通返台</h2>
+        <p class="day-date">上午海邊慢走 · 曾厝垵簡單逛逛 · 午後返程</p>
+      </div>
+      <div class="day-header-deco">五</div>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">用餐</span>
+      <span class="meal-item">⛅ 早餐：飯店早餐</span>
+      <span class="meal-item">☀️ 午餐：曾厝垵附近輕食（返台前簡單吃就好）</span>
+      <span class="meal-item">🌙 晚餐：機場簡餐or回家吃</span>
+    </div>
+    <div class="meal-strip">
+      <span class="meal-label">交通</span>
+      <span class="meal-item">🚲 電動車或步行沿環島路 · 🚗 包車前往五通碼頭</span>
+      <span class="meal-item">⛴️ 小三通到金門 · ✈️ 16:40 金門起飛 → 17:50 台北松山</span>
+    </div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/曾厝垵.jpg" alt="海灣路散步">
+            <span class="spot-type-badge">海濱</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">08:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">海灣路 · 環島路散步</h3>
+            <p class="spot-desc">沿廈門環島路海灣路騎乘電動車或自行車，清晨的海風格外清爽。可選電動自行車（支付寶/微信掃碼，1.5元/30分），或步行悠遊，欣賞廈門灣的晨光。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門環島路" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">1.5元/30分</span><span class="tag">支付寶/微信掃碼</span><span class="tag">可選電動車</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/廈門.jpg" alt="環島路海景">
+            <span class="spot-type-badge">海灘</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">09:30</span><span class="spot-duration">⏱ 1.5小時</span></div>
+            <h3 class="spot-name">環島路海邊步道</h3>
+            <p class="spot-desc">沿著曾厝垵附近的海邊步道慢慢走，看看海浪、吹吹風，比硬塞新景點更適合返程日前的節奏。想拍海景、曬太陽、稍微踏浪都很自在，免費開放。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=廈門環島路+曾厝垵" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">看海放空</span><span class="tag">適合早晨漫步</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/曾厝垵.jpg" alt="曾厝垵文創街區">
+            <span class="spot-type-badge">文創街區</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">11:00</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">曾厝垵文創街區（快速打卡）</h3>
+            <p class="spot-desc">「中國最文藝的漁村」，老漁村改建成充滿個性的文創街區。巷弄裡有手作小店、特色民宿與在地小吃。簡單逛逛打個卡就好，避免在此吃海鮮正餐（返台前建議清淡）。免費入場。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=曾厝垵+廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '曾厝垵大街', '老漁村改造的文青街區，特色小店與在地小吃雲集')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">文青必去</span><span class="tag">簡單逛逛</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/飯店.jpg" alt="回飯店整理行李">
+            <span class="spot-type-badge">返程準備</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">12:30</span><span class="spot-duration">⏱ 1小時</span></div>
+            <h3 class="spot-name">回飯店整理行李 · 輕食午餐</h3>
+            <p class="spot-desc">把上午的海邊散步與曾厝垵行程收尾後，回飯店整理行李、稍作休息，順便吃點清爽午餐，準備下午前往五通碼頭。這一段也能當返程前的機動緩衝時間。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://hotel.eztravel.com.tw/detail-xiamen-25-81201197/xiamen-xinan-yihao-hotel-xiamen-railway-station-mixc-store/" target="_blank">📍 地圖</a>
+              <div class="spot-tags"><span class="tag">返程前緩衝</span><span class="tag">輕食即可</span><span class="tag">記得帶證件</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/小三通圖.jpg" alt="小三通返台">
+            <span class="spot-type-badge">返程</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">14:00</span><span class="spot-duration">⛴️ + ✈️ 返台</span></div>
+            <h3 class="spot-name">前往五通碼頭 · 小三通返台</h3>
+            <p class="spot-desc">從市區前往五通碼頭，搭乘小三通到金門，再轉往金門機場搭乘 16:40 班機回台北松山。建議提前預留通關與轉乘時間，這樣最後一天才不會太趕。</p>
+            <div class="spot-footer">
+              <div class="spot-tags"><span class="tag">預留通關時間</span><span class="tag">16:40 金門起飛</span><span class="tag">17:50 抵達松山</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BUDGET -->
+  <section style="margin-top:4rem">
+    <h2 class="section-title">💰 預算規劃</h2>
+    <p style="color:#a0b8c8; font-size:0.88rem; margin-bottom:1.5rem; font-weight:300">點擊金額可直接修改（單位：新台幣 NT$）</p>
+    <div class="budget-section">
+      <div class="budget-grid">
+        <div class="budget-item"><div class="b-icon">✈️</div><div class="b-label">機票（來回）</div><input type="number" id="b1" value="4800" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🚢</div><div class="b-label">小三通船票</div><input type="number" id="b2" value="1400" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🚗</div><div class="b-label">包車接送</div><input type="number" id="b3" value="2100" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🏨</div><div class="b-label">住宿（4晚）</div><input type="number" id="b4" value="4500" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🏯</div><div class="b-label">土樓包團</div><input type="number" id="b5" value="888" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">⛵</div><div class="b-label">鼓浪嶼船票</div><input type="number" id="b6" value="250" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🎫</div><div class="b-label">景點門票</div><input type="number" id="b7" value="800" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🦞</div><div class="b-label">後灣海鮮午餐</div><input type="number" id="b8" value="600" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🍜</div><div class="b-label">餐飲購物</div><input type="number" id="b9" value="xx" oninput="calcBudget()"></div>
+      </div>
+      <div class="budget-total-wrap">
+        <div class="budget-total-label">預估每人總費用</div>
+        <div class="budget-total" id="totalDisplay">NT$ 0</div>
+        <div class="budget-note">* 以上為預估金額，實際費用依當時匯率與消費調整</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section class="tips-section">
+    <h2 class="section-title">💡 廈門旅遊小提醒</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-head">🪪 台胞證</div>
+        <p>前往廈門需持有效台胞證，建議提前確認有效期限（至少6個月以上）。現在可辦電子台胞證，更加便利。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-head">📱 網路與支付</div>
+        <p>建議開通國際漫遊。廈門普遍使用微信支付與支付寶，建議提前綁定大陸銀行卡或開通跨境支付功能。電動車租借也需掃碼支付。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-head">🌊 鼓浪嶼注意事項</div>
+        <p>島上只能步行，沒有機動車輛。建議穿舒適好走的鞋，自備水和防曬。旺季人潮多，渡輪建議提前3-5天在官網或公眾號預訂。65歲以上船票無免費優惠。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-head">🌤️ 五月天氣</div>
+        <p>五月廈門氣溫約22-28°C，天氣舒適但有時多雲偶有小雨，建議備帶薄外套和折疊傘。土樓行程路況略顛簸，有暈車者備暈車藥。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-head">🦞 必吃美食</div>
+        <p>沙茶麵、薑母鴨、海蠣煎、花生湯、土筍凍、鹹水鴨。八市海鮮市場可現買現煮，後灣海鮮大排擋建議14:00前到場。龍頭路小食勝過鼓浪嶼正餐。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-head">😈 小心詐騙</div>
+        <p>不要隨便相信路邊的人</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>🌊 bonnie製作  旅途愉快</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

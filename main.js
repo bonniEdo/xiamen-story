@@ -6,19 +6,51 @@ const days = [
   { n: 5, title: '✈️ Day 5 · 南普陀寺+廈門大學 > 返台' },
 ];
 const nav = document.getElementById('dayNav');
-days.forEach(d => {
+const mainContent = document.getElementById('mainContent');
+const activeDayStorageKey = `xiamen-story-active-day:${window.location.pathname}`;
+const availableDays = days.filter((d) => document.getElementById(`day-${d.n}`));
+
+function setActiveDay(dayNumber, { scroll = true } = {}) {
+  const targetDay = document.getElementById(`day-${dayNumber}`);
+  if (!targetDay) return false;
+
+  document.querySelectorAll('.day-content').forEach((el) => el.classList.remove('active'));
+  document.querySelectorAll('.day-btn').forEach((btn) => btn.classList.remove('active'));
+
+  targetDay.classList.add('active');
+  nav?.querySelector(`[data-day="${dayNumber}"]`)?.classList.add('active');
+
+  try {
+    window.localStorage.setItem(activeDayStorageKey, String(dayNumber));
+  } catch (error) {
+    console.warn('Unable to persist active day.', error);
+  }
+
+  if (scroll) mainContent?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  return true;
+}
+
+availableDays.forEach(d => {
   const btn = document.createElement('button');
-  btn.className = 'day-btn' + (d.n === 1 ? ' active' : '');
+  btn.className = 'day-btn';
   btn.textContent = d.title;
-  btn.onclick = () => {
-    document.querySelectorAll('.day-content').forEach(el => el.classList.remove('active'));
-    document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(`day-${d.n}`).classList.add('active');
-    btn.classList.add('active');
-    document.getElementById('mainContent').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  btn.dataset.day = String(d.n);
+  btn.onclick = () => setActiveDay(d.n);
   nav.appendChild(btn);
 });
+
+let savedDay = null;
+try {
+  savedDay = Number.parseInt(window.localStorage.getItem(activeDayStorageKey) || '', 10);
+} catch (error) {
+  console.warn('Unable to read persisted active day.', error);
+}
+
+const initialDay = availableDays.some((d) => d.n === savedDay)
+  ? savedDay
+  : availableDays[0]?.n ?? 1;
+
+setActiveDay(initialDay, { scroll: false });
 
 function initSpotCarousels() {
   const carousels = Array.from(document.querySelectorAll('[data-carousel]'));

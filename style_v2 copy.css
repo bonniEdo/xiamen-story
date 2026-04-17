@@ -238,48 +238,6 @@ body {
   position: relative;
 }
 .spot-img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; display:block; filter:sepia(8%) saturate(85%); }
-.spot-carousel { position: relative; width: 100%; height: 100%; }
-.spot-carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.36s ease; will-change: transform; }
-.spot-carousel .spot-img { flex: 0 0 100%; }
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.75);
-  background: rgba(14, 35, 48, 0.38);
-  color: #fff;
-  font-size: 1.15rem;
-  line-height: 1;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.carousel-btn:hover { background: rgba(14, 35, 48, 0.6); transform: translateY(-50%) scale(1.05); }
-.carousel-btn--prev { left: 0.55rem; }
-.carousel-btn--next { right: 0.55rem; }
-.carousel-dots {
-  position: absolute;
-  left: 50%;
-  bottom: 0.6rem;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.38rem;
-}
-.carousel-dot {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(255,255,255,0.55);
-  cursor: pointer;
-  transition: transform 0.18s ease, background 0.18s ease;
-}
-.carousel-dot.is-active { background: #fff; transform: scale(1.18); }
 .spot-img--lujiang { object-position: 70% center; }
 .spot-img--minnan { object-position: 30% center; }
 .spot-img--tianluokeng {object-position: 40% center ;}
@@ -346,53 +304,6 @@ body {
 .spot-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .tag { font-size: 0.68rem; padding: 0.18rem 0.6rem; background: var(--light-gray); color: var(--gray); border: 1px solid var(--border); }
 
-/* === TIMELINE TRANSFER === */
-.tl-item--transfer {
-  padding-bottom: 1.2rem;
-}
-.tl-item--transfer::before {
-  top: 0;
-  bottom: -1.55rem;
-}
-.transfer-inline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.18rem;
-  padding: 0.15rem 0 0.35rem;
-}
-.transfer-ellipsis {
-  width: 0.26rem;
-  height: 0.26rem;
-  border-radius: 50%;
-  background: rgba(154, 107, 40, 0.42);
-  box-shadow:
-    0 0.42rem 0 rgba(154, 107, 40, 0.32),
-    0 0.84rem 0 rgba(154, 107, 40, 0.22);
-  margin: 0.08rem 0 0.92rem;
-}
-.transfer-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.14rem;
-  color: #9a6b28;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
-}
-.transfer-label-note {
-  font-size: 0.64rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: rgba(154, 107, 40, 0.76);
-}
-.transfer-label + .transfer-ellipsis {
-  margin: 0.92rem 0 0.08rem;
-}
-
 /* === MEAL STRIP === */
 .meal-strip {
   display: flex; gap: 1rem; margin: 1.5rem 0 2.5rem;
@@ -401,14 +312,6 @@ body {
 }
 .meal-label { font-size: 0.68rem; color: var(--ocean-mid); font-weight: 600; letter-spacing: 0.2em; margin-right: 0.5rem; text-transform: uppercase; }
 .meal-item { font-size: 0.84rem; color: var(--gray); font-weight: 300; }
-.meal-item-link {
-  text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-.meal-item-link:hover {
-  color: var(--primary);
-  opacity: 0.9;
-}
 
 /* === BUDGET === */
 .budget-section {
@@ -473,43 +376,12 @@ footer {
     width: 100%;
     aspect-ratio: 16 / 9;
   }
-  .carousel-btn {
-    width: 1.8rem;
-    height: 1.8rem;
-    font-size: 1.02rem;
-  }
   .spot-info { padding: 1.15rem 1.2rem 1.25rem; }
   .spot-meta {
     width: fit-content;
     max-width: 100%;
     flex-wrap: wrap;
     border-radius: 14px;
-  }
-  .transfer-inline {
-    gap: 0.14rem;
-    padding-bottom: 0.3rem;
-  }
-  .tl-item--transfer::before {
-    top: 0;
-    bottom: -1.42rem;
-  }
-  .transfer-ellipsis {
-    width: 0.22rem;
-    height: 0.22rem;
-    box-shadow:
-      0 0.36rem 0 rgba(154, 107, 40, 0.32),
-      0 0.72rem 0 rgba(154, 107, 40, 0.22);
-    margin: 0.06rem 0 0.78rem;
-  }
-  .transfer-label {
-    font-size: 0.74rem;
-    letter-spacing: 0.1em;
-  }
-  .transfer-label-note {
-    font-size: 0.6rem;
-  }
-  .transfer-label + .transfer-ellipsis {
-    margin: 0.78rem 0 0.06rem;
   }
   .budget-grid { grid-template-columns: repeat(2,1fr); }
   .day-header-deco { display: none; }
