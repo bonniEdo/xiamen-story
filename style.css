@@ -26,6 +26,7 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 html {
+  font-size: 17px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: auto;
   text-size-adjust: auto;
