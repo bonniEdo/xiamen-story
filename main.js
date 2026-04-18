@@ -1,9 +1,9 @@
 const days = [
   { n: 1, title: '🛬 Day 1 · 抵廈+市區漫遊' },
-  { n: 2, title: '🚇 Day 2 · 集美學村+老院子景區' },
+  { n: 2, title: '🚇 Day 2 · 老院子景區+閩南傳奇秀' },
   { n: 3, title: '🏯 Day 3 · 雲水謠+田螺坑' },
-  { n: 4, title: '🌊 Day 4 · 鼓浪嶼' },
-  { n: 5, title: '✈️ Day 5 · 南普陀寺+廈門大學 > 返台' },
+  { n: 4, title: '🌊 Day 4 · 鼓浪嶼+嶼見閩南' },
+  { n: 5, title: '✈️ Day 5 · 植物園＋南普陀寺 > 返台' },
 ];
 const nav = document.getElementById('dayNav');
 const mainContent = document.getElementById('mainContent');

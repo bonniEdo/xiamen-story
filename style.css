@@ -454,6 +454,42 @@ footer {
 }
 
 @media (max-width: 640px) {
+  html {
+    font-size: 18.5px;
+  }
+  .hero::before,
+  .hero::after,
+  .spot-card::after {
+    display: none;
+  }
+  .day-nav,
+  .spot-card,
+  .budget-section,
+  .budget-item,
+  .tip-card {
+    box-shadow: none;
+  }
+  .container {
+    padding: 2.4rem 1rem;
+  }
+  .day-nav {
+    border-bottom-color: rgba(204,228,238,0.75);
+  }
+  .day-btn {
+    padding: 0.95rem 1.15rem;
+    font-size: 0.9rem;
+  }
+  .day-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.1rem;
+    gap: 1rem;
+  }
+  .day-num {
+    font-size: 0.76rem;
+  }
+  .day-date {
+    font-size: 0.94rem;
+  }
   .timeline { padding-left: 3rem; }
   .tl-item { padding-bottom: 1.5rem; }
   .tl-item::before {
@@ -470,6 +506,9 @@ footer {
     box-shadow: 0 5px 12px rgba(40,100,130,0.1);
   }
   .spot-card { flex-direction: column; }
+  .spot-card {
+    border-radius: 18px;
+  }
   .spot-img-wrap {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -479,12 +518,44 @@ footer {
     height: 1.8rem;
     font-size: 1.02rem;
   }
-  .spot-info { padding: 1.15rem 1.2rem 1.25rem; }
+  .spot-info { padding: 1.15rem 1.1rem 1.25rem; }
   .spot-meta {
     width: fit-content;
     max-width: 100%;
     flex-wrap: wrap;
     border-radius: 14px;
+  }
+  .spot-time,
+  .spot-duration,
+  .tag {
+    font-size: 0.78rem;
+  }
+  .spot-name {
+    font-size: 1.7rem;
+  }
+  .spot-desc,
+  .meal-item,
+  .tip-card p {
+    font-size: 0.94rem;
+    line-height: 1.85;
+  }
+  .meal-strip {
+    margin: 1.15rem 0 1.85rem;
+    padding: 0.95rem 1rem;
+  }
+  .meal-label {
+    font-size: 0.72rem;
+  }
+  .btn-map,
+  .btn-audio {
+    font-size: 0.82rem;
+  }
+  .tip-card {
+    padding: 1.1rem 1.15rem;
+    border-left-width: 3px;
+  }
+  .tip-card .tip-head {
+    font-size: 1rem;
   }
   .transfer-inline {
     gap: 0.14rem;
