@@ -308,7 +308,15 @@ body {
 }
 .spot-time { font-size: 0.72rem; color: var(--ocean-mid); font-weight: 600; letter-spacing: 0.12em; }
 .spot-duration { font-size: 0.72rem; color: #aac8d8; }
-.spot-name { font-family:'Cormorant Garamond',serif; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.55rem; }
+.spot-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+.spot-name { font-family:'Cormorant Garamond',serif; font-size: 1.5rem; font-weight: 600; margin-bottom: 0; }
 .spot-desc { font-size: 0.87rem; color: var(--gray); line-height: 1.8; flex: 1; font-weight: 300; }
 .spot-footer { margin-top: 1rem; display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; }
 .btn-map {
@@ -323,22 +331,49 @@ body {
 
 /* === AUDIO STORY BTN === */
 .btn-audio {
-  display: none !important;
-  align-items: center; gap: 0.3rem;
-  padding: 0.35rem 1rem;
-  background: var(--ocean-light); border: 1px solid var(--ocean);
+  display: inline-flex;
+  align-items: center; gap: 0.45rem;
+  padding: 0.46rem 0.9rem;
+  background: linear-gradient(180deg, rgba(240,248,252,0.96), rgba(225,241,248,0.92));
+  border: 1px solid rgba(122,184,212,0.6);
+  border-radius: 999px;
   color: var(--dark); cursor: pointer;
-  font-size: 0.75rem; font-weight: 500;
+  font-size: 0.76rem; font-weight: 600;
   font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 0.05em; transition: all 0.2s;
+  letter-spacing: 0.05em; transition: all 0.22s ease;
+  box-shadow: 0 10px 24px rgba(122,184,212,0.15);
+  white-space: nowrap;
 }
-.btn-audio:hover { background: var(--ocean); color: white; }
+.btn-audio::before {
+  content: attr(data-icon);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.btn-audio:hover {
+  background: linear-gradient(180deg, rgba(122,184,212,0.95), rgba(91,158,192,0.95));
+  color: white;
+  border-color: rgba(91,158,192,0.95);
+  transform: translateY(-1px);
+}
 .btn-audio:disabled { opacity: 0.6; cursor: wait; }
 .btn-audio[data-state="playing"] {
-  background: var(--ocean); color: white;
+  background: linear-gradient(180deg, rgba(91,158,192,1), rgba(71,132,165,1)); color: white;
   animation: audioPulse 1.5s ease-in-out infinite;
 }
-.btn-audio[data-state="paused"] { background: var(--primary-light); color: var(--primary); }
+.btn-audio[data-state="paused"] {
+  background: linear-gradient(180deg, rgba(252,246,231,1), rgba(248,238,213,1));
+  color: #8d5f16;
+  border-color: rgba(216,181,112,0.72);
+}
+@media (max-width: 640px) {
+  .spot-title-row {
+    align-items: flex-start;
+  }
+
+  .btn-audio {
+    width: fit-content;
+  }
+}
 @keyframes audioPulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(122,184,212,0.5); }
   50%       { box-shadow: 0 0 0 8px rgba(122,184,212,0); }

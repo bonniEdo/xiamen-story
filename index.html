@@ -100,7 +100,7 @@
           <div class="spot-info">
             <div class="spot-meta"><span class="spot-time">11:30</span><span class="spot-duration">⛴️ 約0.5小時</span></div>
             <h3 class="spot-name">金門水頭碼頭 → 廈門五通碼頭</h3>
-            <p class="spot-desc">從金門水頭碼頭搭乘小三通渡輪前往廈門五通碼頭，航程約1小時。請提前準備好台胞證辦理出入境，建議提早30分鐘到碼頭候船。過海峽時可在船頭欣賞金廈兩岸風光。</p>
+            <p class="spot-desc">從金門水頭碼頭搭乘小三通渡輪前往廈門五通碼頭，航程約30分鐘。請提前準備好台胞證辦理出入境，建議提早30分鐘到碼頭候船。過海峽時可在船頭欣賞金廈兩岸風光。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=金門水頭碼頭" target="_blank">📍 地圖</a>
               <button class="btn-audio" onclick="playSpotStory(this, '金門小三通渡輪', '金門水頭碼頭搭渡輪橫渡台灣海峽前往廈門，是充滿歷史感的兩岸交流航線', './audio/小三通.mp3')" data-state="idle">🎙️ 聽故事</button>
@@ -140,29 +140,37 @@
         <div class="tl-dot"></div>
         <div class="spot-card">
           <div class="spot-img-wrap">
-            <div class="spot-carousel" data-carousel>
-              <div class="spot-carousel-track">
-                <img class="spot-img is-active" src="./pic/中山路.jpg" alt="中山路">
-                <img class="spot-img" src="./pic/八市.jpg" alt="八市">
-              </div>
-              <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous image" data-carousel-prev>&#10094;</button>
-              <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next image" data-carousel-next>&#10095;</button>
-              <div class="carousel-dots">
-                <button class="carousel-dot is-active" type="button" aria-label="Slide 1" data-carousel-dot="0"></button>
-                <button class="carousel-dot" type="button" aria-label="Slide 2" data-carousel-dot="1"></button>
-              </div>
+            <img class="spot-img" src="./pic/八市.jpg" alt="八市">
+            <span class="spot-type-badge">市場</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">13:00~14:00</span><span class="spot-duration">約1小時</span></div>
+            <h3 class="spot-name">第八市場（八市）</h3>
+            <p class="spot-desc">先從八市開始，感受廈門最鮮活的在地日常。海鮮攤、熟食店與老字號小吃一路排開，邊走邊看邊吃，最能感受到市井節奏與老城氣味。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.app.goo.gl/iy5DSUNCGUxZWwUz8" target="_blank">📍 地圖：八市</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '第八市場（八市）', '廈門最有生活感的傳統市場，海鮮、小吃與市井風景交織', './audio/第八市場.mp3')" data-state="idle">聽故事</button>
+              <div class="spot-tags"><span class="tag">美食路線</span><span class="tag">市場散策</span></div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/中山路.jpg" alt="中山路">
             <span class="spot-type-badge">老街</span>
           </div>
           <div class="spot-info">
-            <div class="spot-meta"><span class="spot-time">13:00~15:00</span><span class="spot-duration">約2小時</span></div>
-            <h3 class="spot-name">中山路步行街 ＆ 第八市場（八市）</h3>
-            <p class="spot-desc">先逛中山路百年騎樓老街，再接著走到八市感受在地海鮮市場與市井節奏。兩地合併安排，抓約 2 小時輕鬆逛逛，邊吃邊拍剛剛好。</p>
+            <div class="spot-meta"><span class="spot-time">14:00~15:00</span><span class="spot-duration">約1小時</span></div>
+            <h3 class="spot-name">中山路步行街</h3>
+            <p class="spot-desc">接著散步到中山路，看看百年騎樓與南洋風格街景。這裡適合放慢腳步，拍照、吃甜點、順便感受廈門最經典的老街氛圍。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.app.goo.gl/vnr5iKTGrebiu46MA" target="_blank">📍 地圖：中山路</a>
-              <a class="btn-map" href="https://maps.app.goo.gl/iy5DSUNCGUxZWwUz8" target="_blank">📍 地圖：八市</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '中山路與第八市場', '老街與傳統市場散策', './audio/???.mp3')" data-state="idle">聽故事</button>
-              <div class="spot-tags"><span class="tag">美食路線</span></div>
+              <button class="btn-audio" onclick="playSpotStory(this, '中山路步行街', '廈門百年騎樓老街，閩南美食與南洋建築交會的熱鬧街區', './audio/中山路.mp3')" data-state="idle">聽故事</button>
+              <div class="spot-tags"><span class="tag">美食路線</span><span class="tag">老街散步</span></div>
             </div>
           </div>
         </div>
@@ -176,7 +184,7 @@
         </div>
       </div>
 
-      <div class="tl-item">
+      <!-- <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="spot-card">
           <div class="spot-img-wrap">
@@ -191,6 +199,46 @@
               <a class="btn-map" href="https://maps.app.goo.gl/iNAN7u7jM82Lfy4v6" target="_blank">📍 地圖</a>
               <button class="btn-audio" onclick="playSpotStory(this, '廈門大學', '中國最美大學的嘉庚建築群與芙蓉湖', './audio/廈門大學.mp3')" data-state="idle">🎙️ 聽故事</button>
               <div class="spot-tags"><span class="tag">免費</span><span class="tag">需預約</span><span class="tag">提前3天預約</span><span class="tag">帶身份證</span></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/白城沙灘.jpg" alt="白城沙灘">
+            <span class="spot-type-badge">海邊散步</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">16:20</span><span class="spot-duration">⏱ 40分鐘</span></div>
+            <h3 class="spot-name">白城沙灘</h3>
+            <p class="spot-desc">廈大白城旁的海灘是廈門很受歡迎的看海散步點，沙灘平緩、海風舒服，還能遠望鼓浪嶼與沿岸城市線條。傍晚時分來這裡最剛好，走一小段路、拍拍海景，節奏輕鬆又愜意。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=白城沙灘 廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '白城沙灘', '廈門市區很受歡迎的海邊散步點，適合吹海風看夕色')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">海景散步</span><span class="tag">傍晚舒服</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="spot-card">
+          <div class="spot-img-wrap">
+            <img class="spot-img" src="./pic/演武大橋.jpg" alt="演武大橋">
+            <span class="spot-type-badge">濱海景觀</span>
+          </div>
+          <div class="spot-info">
+            <div class="spot-meta"><span class="spot-time">17:10</span><span class="spot-duration">⏱ 30分鐘</span></div>
+            <h3 class="spot-name">演武大橋</h3>
+            <p class="spot-desc">演武大橋沿著海岸線延伸，是廈門非常經典的城市海景視角之一。站在附近望出去，能同時看到海面、橋體曲線與廈門天際線，尤其接近日落時，整體畫面很有層次，也很適合拍照停留。</p>
+            <div class="spot-footer">
+              <a class="btn-map" href="https://maps.google.com/?q=演武大橋 觀景平台 廈門" target="_blank">📍 地圖</a>
+              <button class="btn-audio" onclick="playSpotStory(this, '演武大橋', '沿海而行的城市景觀大橋，日落時分特別適合看海與拍照', './audio/演武大橋.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <div class="spot-tags"><span class="tag">免費</span><span class="tag">橋景海景</span><span class="tag">日落推薦</span></div>
             </div>
           </div>
         </div>
@@ -237,7 +285,7 @@
       <div class="tl-item tl-item--transfer" aria-label="雙子星到和平港口的交通安排">
         <div class="transfer-inline">
           <span class="transfer-ellipsis" aria-hidden="true"></span>
-          <span class="transfer-label">🚕 計程車</span>
+          <span class="transfer-label">🚗 專車接送</span>
           <span class="transfer-ellipsis" aria-hidden="true"></span>
         </div>
       </div>
@@ -521,15 +569,15 @@
       <div class="meal-row">
         <span class="meal-label">用餐</span>
         <div class="meal-row-items meal-row-items--stacked">
-          <span class="meal-item">⛅ 早餐：飯店早餐（行李帶到大廳寄放）</span>
-          <span class="meal-item">☀️ 午餐：景區內合菜（自費）</span>
+          <span class="meal-item">⛅ 早餐：飯店早餐</span>
+          <span class="meal-item">☀️ 午餐：景區內合菜</span>
           <span class="meal-item">🌙 晚餐：火車站附近吃閩南菜</span>
         </div>
       </div>
       <div class="meal-row">
         <span class="meal-label">交通</span>
         <div class="meal-row-items meal-row-items--stacked">
-          <span class="meal-item">🚗 包車接送（9人商務車）· 計程車去新飯店</span>
+          <span class="meal-item">🚗 包車接送（29人商務大巴，行李要一起上車）</span>
           <span class="meal-item">⏱ 7:20 飯店大廳集合</span>
         </div>
       </div>
@@ -724,7 +772,7 @@
         <span class="meal-label">交通</span>
         <div class="meal-row-items meal-row-items--stacked">
           <span class="meal-item">⛴️ 渡船往返（提前3-5天買票），島上全程步行</span>
-          <span class="meal-item">⏱ 8:30 飯店大廳集合</span>
+          <span class="meal-item">⏱ 8:00 飯店大廳集合</span>
         </div>
       </div>
     </div>
@@ -738,13 +786,13 @@
             <span class="spot-type-badge">渡輪</span>
           </div>
           <div class="spot-info">
-            <div class="spot-meta"><span class="spot-time">08:30</span><span class="spot-duration">⏱ 約30分鐘</span></div>
+            <div class="spot-meta"><span class="spot-time">09:10</span><span class="spot-duration">⏱ 約30分鐘</span></div>
             <h3 class="spot-name">東渡碼頭搭船前往鼓浪嶼</h3>
-            <p class="spot-desc">從東渡碼頭搭船前往鼓浪嶼，航行時間約 30 分鐘。長者可使用特殊旅客預約通道。</p>
+            <p class="spot-desc">從東渡碼頭搭船前往鼓浪嶼，航行時間約 30 分鐘。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=廈門東渡碼頭" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼渡輪', '從東渡碼頭出發，三十分鐘渡海抵達這座無車小島')" data-state="idle">🎙️ 聽故事</button>
-              <div class="spot-tags"><span class="tag">提早手機訂票</span><span class="tag">台胞證資料必備</span><span class="tag">長者可使用特殊旅客預約通道</span></div>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼渡輪', '從東渡碼頭出發，三十分鐘渡海抵達這座無車小島')" data-state="idle">🎙️ 聽故事</button> -->
+              <div class="spot-tags"><span class="tag">提早手機訂票</span><span class="tag">台胞證資料必備</span></div>
             </div>
           </div>
         </div>
@@ -798,7 +846,7 @@
             <p class="spot-desc">鼓浪嶼最熱鬧的美食街，推薦花生湯、黃勝記豬腿肉、龍頭路餡餅等在地小食。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=龍頭路+鼓浪嶼" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼龍頭路', '龍頭路花生湯、黃勝記豬腿肉，鼓浪嶼必吃道地小食')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '鼓浪嶼龍頭路', '龍頭路花生湯、黃勝記豬腿肉，鼓浪嶼必吃道地小食')" data-state="idle">🎙️ 聽故事</button> -->
               <div class="spot-tags"><span class="tag">花生湯必喝</span></div>
             </div>
           </div>
@@ -853,7 +901,7 @@
             <p class="spot-desc">鼓浪嶼最高點（海拔92.68m），登頂可360度俯瞰整座小島、廈門市區及台灣海峽。鄭成功曾在此屯兵，岩壁上「天風海濤」四字石刻令人印象深刻。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=日光岩+鼓浪嶼" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '日光岩 — 鼓浪嶼制高點', '海拔九十三公尺的鼓浪嶼最高點，鄭成功屯兵之地')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '日光岩 — 鼓浪嶼制高點', '海拔九十三公尺的鼓浪嶼最高點，鄭成功屯兵之地')" data-state="idle">🎙️ 聽故事</button> -->
               <div class="spot-tags"><span class="tag">65+免費</span><span class="tag">刷身份證入園</span><span class="tag">制高點</span></div>
             </div>
           </div>
@@ -890,7 +938,7 @@
             <p class="spot-desc">全國首個閩南幻境主題景區，2025年5月全新開幕！佔地20.1萬平方米，復刻116棟歷史建築。三大演區、八大街區、83項非遺體驗、近30場沉浸式演藝。穿越「宋韻閩南」「海絲閩南」「煙火閩南」「南洋閩南」四大時空，可品嚐沙茶麵、土筍凍，體驗剪瓷雕、布袋木偶，與44名NPC演員互動。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=嶼見閩南+廈門" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '嶼見閩南 · 時光幻境', '2025年全新開幕，全國首個閩南幻境主題景區')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '嶼見閩南 · 時光幻境', '2025年全新開幕，全國首個閩南幻境主題景區')" data-state="idle">🎙️ 聽故事</button> -->
               <div class="spot-tags"><span class="tag">2025全新</span><span class="tag">沉浸式體驗</span><span class="tag">83項非遺</span><span class="tag">NPC互動</span></div>
             </div>
           </div>
@@ -963,7 +1011,7 @@
             <p class="spot-desc">廈門園林植物園又稱萬石植物園，園內有熱帶雨林區與多肉植物區兩大亮點。熱帶雨林區定時噴灑水霧，營造出如夢似幻的仙境感；多肉植物區則有巨大的仙人掌與仙人球，非常適合拍照。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.app.goo.gl/iNAN7u7jM82Lfy4v6" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '園林植物園', '熱帶雨林區的夢幻水霧與多肉植物區的巨大仙人掌', './audio/園林植物園.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '園林植物園', '熱帶雨林區的夢幻水霧與多肉植物區的巨大仙人掌', './audio/園林植物園.mp3')" data-state="idle">🎙️ 聽故事</button> -->
               <div class="spot-tags"><span class="tag">FREE/65+</span><span class="tag">搭觀光車</span><span class="tag">18:00停止入園</span></div>
             </div>
           </div>
@@ -982,7 +1030,7 @@
             <p class="spot-desc">始建於唐代的閩南佛教聖地，因供奉觀音菩薩、位於普陀山以南而得名。寺內天王殿、大雄寶殿、藏經閣氣勢恢宏，後山五老峰可俯瞰廈門全景。免費開放，每人可領一支香，贈送「隨緣」小卡。緊鄰廈門大學，步行僅需5分鐘。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=南普陀寺+廈門" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '南普陀寺 · 千年古剎', '唐代古剎，閩南佛教聖地，緊鄰廈門大學')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '南普陀寺 · 千年古剎', '唐代古剎，閩南佛教聖地，緊鄰廈門大學')" data-state="idle">🎙️ 聽故事</button> -->
               <div class="spot-tags"><span class="tag">素食推薦</span><span class="tag">返台前祈福</span></div>
             </div>
           </div>
@@ -1001,7 +1049,7 @@
             <p class="spot-desc">從廈門五通碼頭搭乘小三通渡輪前往金門水頭碼頭，航程約1小時。建議提早30分鐘到碼頭候船。</p>
             <div class="spot-footer">
               <a class="btn-map" href="https://maps.google.com/?q=金門水頭碼頭" target="_blank">📍 地圖</a>
-              <button class="btn-audio" onclick="playSpotStory(this, '金門小三通渡輪', '金門水頭碼頭搭渡輪橫渡台灣海峽前往廈門，是充滿歷史感的兩岸交流航線', './audio/小三通.mp3')" data-state="idle">🎙️ 聽故事</button>
+              <!-- <button class="btn-audio" onclick="playSpotStory(this, '金門小三通渡輪', '金門水頭碼頭搭渡輪橫渡台灣海峽前往廈門，是充滿歷史感的兩岸交流航線', './audio/小三通.mp3')" data-state="idle">🎙️ 聽故事</button> -->
             </div>
           </div>
         </div>
@@ -1035,13 +1083,13 @@
       <div class="budget-grid">
         <div class="budget-item"><div class="b-icon">✈️</div><div class="b-label">機票（來回）</div><input type="number" id="b1" value="4800" oninput="calcBudget()"></div>
         <div class="budget-item"><div class="b-icon">🚢</div><div class="b-label">小三通船票（來回）</div><input type="number" id="b2" value="1560" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">🚗🏯</div><div class="b-label">土樓私人包車團</div><input type="number" id="b3" value="820" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🚗🏯</div><div class="b-label">土樓私人包車團</div><input type="number" id="b3" value="1300" oninput="calcBudget()"></div>
         <div class="budget-item"><div class="b-icon">🏨</div><div class="b-label">住宿（4晚）</div><input type="number" id="b4" value="4000" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">🚗</div><div class="b-label">包車接機x2</div><input type="number" id="b5" value="700" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">🌊</div><div class="b-label">鷺江夜遊</div><input type="number" id="b6" value="600" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">🎭</div><div class="b-label">閩南傳奇秀</div><input type="number" id="b7" value="1110" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">⛵</div><div class="b-label">鼓浪嶼船票</div><input type="number" id="b8" value="200" oninput="calcBudget()"></div>
-        <div class="budget-item"><div class="b-icon">🎭</div><div class="b-label">嶼間閩南</div><input type="number" id="b9" value="500" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🚗</div><div class="b-label">包車接機x2</div><input type="number" id="b5" value="800" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🌊</div><div class="b-label">鷺江夜遊</div><input type="number" id="b6" value="640" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🎭</div><div class="b-label">閩南傳奇秀</div><input type="number" id="b7" value="1200" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">⛵</div><div class="b-label">鼓浪嶼船票</div><input type="number" id="b8" value="170" oninput="calcBudget()"></div>
+        <div class="budget-item"><div class="b-icon">🎭</div><div class="b-label">嶼間閩南</div><input type="number" id="b9" value="310" oninput="calcBudget()"></div>
 
       </div>
       <div class="budget-total-wrap">
